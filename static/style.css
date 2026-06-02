@@ -26,7 +26,7 @@ body {
     gap: 15px;
     margin-top: 10px;
     position: absolute;
-    left: 50%;
+    left: 48%;
     transform: translateX(-50%);
 }
 
@@ -115,4 +115,117 @@ body {
     width: 60%;
     border: 2px solid #F28705;
     border-radius: 12px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.tabela-estoque th,
+.tabela-estoque td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* TELA EDITAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F0F1F2;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #1D3273;
+  color: #ffffff;
+  padding: 20px 30px;
+  border-bottom: 3px solid #51608C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+header p {
+  font-size: 0.9rem;
+  margin: 4px 0 0;
+  opacity: 0.8;
+}
+
+.foto-perfil {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.foto-sistema {
+  width: 105px;
+  object-fit: contain
+}
+
+main {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.secao-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #1D3273;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #1D3273;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1D3273;
+  box-shadow: 0 0 0 3px rgba(29, 50, 115, 0.15);
+}
+
+.btn-outline-primary {
+  flex: 1;
+  padding: 12px;
+}
+
+.drag-area {
+    border: 2px dashed #1D3273;
+    border-radius: 5px;
+    background: #f7f9fc;
+    color: #51608C;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.drag-area.active {
+    background: #e1e9f3;
+    border-color: #1D3273;
+}
+#preview {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
