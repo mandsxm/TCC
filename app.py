@@ -16,15 +16,14 @@ def login_required():
 def admin_required():
     return session.get('tipo') == 'admin'
 
+# DO LOGIN PARA TABELA
 
-# =========================
-# LOGIN / HOME
-# =========================
+# Define a rota inicial
 @app.route('/')
 def home():
     return render_template('index.html')
 
-
+# Rota de como o usurário e o admin vão logar
 @app.route('/login', methods=['POST'])
 def login():
     email = request.form.get('email')
@@ -34,7 +33,7 @@ def login():
         host='localhost',
         port=3306,
         user='root',
-        password='',
+        password='Mica@2009',
         database='almoxarifado'
     )
 
@@ -51,16 +50,15 @@ def login():
     conexao.close()
 
     if user:
-        session['usuario'] = user[1]   # nome
-        session['tipo'] = user[4]      # admin ou usuario
+        session['usuario'] = user[1]   
+        session['tipo'] = user[4]      
         return redirect('/tabela')
     else:
         return "Email ou senha inválidos"
 
+# ROTAS ADMIN + USUÁRIO
 
-# =========================
-# ROTAS (ADMIN + USUÁRIO)
-# =========================
+# Tabela.html: Página para visualizar estoque
 @app.route('/tabela')
 def tabela():
     if not login_required():
@@ -70,7 +68,7 @@ def tabela():
         host='localhost',
         port=3306,
         user='root',
-        password='',
+        password='Mica@2009',
         database='almoxarifado'
     )
 
@@ -83,7 +81,7 @@ def tabela():
 
     return render_template('tabela.html', resultado=resultado)
 
-
+# Editar.html: Página para editar o estoque
 @app.route('/editar')
 def editar():
     if not login_required():
@@ -91,10 +89,62 @@ def editar():
 
     return render_template('editar.html')
 
-
-# =========================
 # ROTAS (SOMENTE ADMIN)
-# =========================
+
+# Acesso.html: Página para visualizar contas de usuários
+@app.route('/acesso')
+def acesso():
+    if not login_required():
+        return redirect('/')
+
+    if not admin_required():
+        return "Acesso negado (somente admin)"
+
+    conexao = mysql.connector.connect(
+        host='localhost',
+        port=3306,
+        user='root',
+        password='Mica@2009',
+        database='almoxarifado'
+    )
+
+    cursor = conexao.cursor()
+
+    cursor.execute("SELECT * FROM usuarios")
+    resultado = cursor.fetchall()
+
+    cursor.close()
+    conexao.close()
+
+    return render_template('acesso.html', resultado=resultado)
+
+# Excluir usuários
+@app.route('/excluirUsuario/<int:id>', methods=['DELETE'])
+def excluir_usuario(id):
+
+    conexao = mysql.connector.connect(
+        host='localhost',
+        port=3306,
+        user='root',
+        password='Mica@2009',
+        database='almoxarifado'
+    )
+
+    cursor = conexao.cursor()
+
+    cursor.execute(
+        "DELETE FROM usuarios WHERE id = %s",
+        (id,)
+    )
+
+    conexao.commit()
+
+    cursor.close()
+    conexao.close()
+
+    return jsonify({"success": True})
+
+# Cadastrar.html: Página para adicionar e monitorar contas de usuários
 @app.route('/cadastro')
 def cadastro():
     if not login_required():
@@ -104,16 +154,6 @@ def cadastro():
         return "Acesso negado (somente admin)"
 
     return render_template('cadastro.html')
-
-@app.route('/perfiladmin')
-def perfiladmin():
-    if not login_required():
-        return redirect('/')
-
-    if not admin_required():
-        return "Acesso negado (somente admin)"
-
-    return render_template('perfiladmin.html')
 
 @app.route('/entrada', methods=['POST'])
 def entrada():
@@ -128,7 +168,7 @@ def entrada():
         host='localhost',
         port=3306,
         user='root',
-        password='',
+        password='Mica@2009',
         database='almoxarifado'
     )
 
@@ -183,7 +223,7 @@ def excluir(id):
         host='localhost',
         port=3306,
         user='root',
-        password='',
+        password='Mica@2009',
         database='almoxarifado'
     )
 
