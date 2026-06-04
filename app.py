@@ -34,7 +34,7 @@ def login():
         host='localhost',
         port=3306,
         user='root',
-        password='Mica@2009',
+        password='',
         database='almoxarifado'
     )
 
@@ -70,7 +70,7 @@ def tabela():
         host='localhost',
         port=3306,
         user='root',
-        password='Mica@2009',
+        password='',
         database='almoxarifado'
     )
 
@@ -128,7 +128,7 @@ def entrada():
         host='localhost',
         port=3306,
         user='root',
-        password='Mica@2009',
+        password='',
         database='almoxarifado'
     )
 
@@ -183,7 +183,7 @@ def excluir(id):
         host='localhost',
         port=3306,
         user='root',
-        password='Mica@2009',
+        password='',
         database='almoxarifado'
     )
 
