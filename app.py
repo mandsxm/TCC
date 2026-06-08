@@ -10,11 +10,10 @@ app.secret_key = "chave_secreta_123"
 
 def get_db():
     return mysql.connector.connect(
-        host='localhost',
+        host='Mica@2009',
         user='root',
         password='',
         database='almoxarifado',
-        port=3306
     )
 
 # AUTORIZAÇÃO
