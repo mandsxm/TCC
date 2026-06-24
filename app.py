@@ -11,7 +11,7 @@ def get_db():
     return mysql.connector.connect(
         host='127.0.0.1',
         user='root',
-        password='Mica@2009',
+        password='',
         database='almoxarifado',
     )
 
@@ -52,7 +52,12 @@ def login():
         session['email'] = user[2] # Salva as informações da sessão
         return redirect('/tabela') # Redireciona para a página de tabela
 
-    return "Email ou senha inválidos" # Se não, retorna uma mensagem de erro
+    return render_template ('login_erro.html', erro=True)
+
+# LOGIN INCORRETO
+@app.route('/login_erro.html')
+def login_erro():
+    return render_template('login_erro.html')
 
 # LOGOUT
 @app.route('/logout') # Inicia a rota de logout, que limpa a sessão do usuário
