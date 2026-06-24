@@ -1,0 +1,14 @@
+CURSOR EXECUTE
+Executa qualquer comando do MySQL;
+
+CURSOR FETCHALL
+Pega todos os resultados e retorna os valores pegados;
+
+CURSOR FETCHONE
+Pega apenas um resultado do banco;
+
+CONEXÃO COMMIT
+Salva as mudanças no banco;
+
+CONEXÃO CLOSE
+Fecha a conexão com o banco de dados
