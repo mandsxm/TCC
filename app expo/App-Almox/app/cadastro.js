@@ -80,49 +80,49 @@ export default function Cadastro() {
         </View>
       )}
         <View>
-        <Text style={styles.titulo}>
-            {"Boas-vindas ao\nCadastro de Usuários!"} {/* \n serve pra quebrar a linha, "Cadastro de Usuários!" fica embaixo de "Boas-vindas ao"*/}
-        </Text>
+            <Text style={styles.titulo}>
+                {"Boas-vindas ao\nCadastro de Usuários!"} {/* \n serve pra quebrar a linha, "Cadastro de Usuários!" fica embaixo de "Boas-vindas ao"*/}
+            </Text>
 
-        {/* AQUI VAI ENTRAR O FORMULÁRIO DE CADASTRO */}
-                    <Text style={styles.email}>
-                    Email
-                    </Text>
+            {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}
+            <Text style={styles.email}>
+                Email
+            </Text>
         
-                    <TextInput
-                    style={[
-                        styles.input,
-                        emailFocus && styles.inputFocus
-                    ]}
-                    placeholder="seunome@empresa.com"
-                    placeholderTextColor="#888"
-                    onFocus={() => setEmailFocus(true)}
-                    onBlur={() => setEmailFocus(false)}
-                    />
+            <TextInput
+                style={[
+                    styles.input,
+                    emailFocus && styles.inputFocus
+                ]}
+                placeholder="seunome@empresa.com"
+                placeholderTextColor="#888"
+                onFocus={() => setEmailFocus(true)}
+                onBlur={() => setEmailFocus(false)}
+                />
         
-                    <Text style={styles.senha}>
+                <Text style={styles.senha}>
                     Senha
-                    </Text>
+                </Text>
         
-                    <TextInput
-                    style={[
-                        styles.input,
-                        senhaFocus && styles.inputFocus
-                    ]}
-                    placeholder="Digite sua senha"
-                    placeholderTextColor="#888"
-                    onFocus={() => setSenhaFocus(true)}
-                    onBlur={() => setSenhaFocus(false)}
-                    />
+                <TextInput
+                style={[
+                    styles.input,
+                    senhaFocus && styles.inputFocus
+                ]}
+                placeholder="Digite sua senha"
+                placeholderTextColor="#888"
+                onFocus={() => setSenhaFocus(true)}
+                onBlur={() => setSenhaFocus(false)}
+                />
         
-                    <TouchableOpacity
-                    style={styles.button}
-                    onPress={() => router.push('/tabela')}
-                    >
-                    <Text style={styles.buttonText}>
-                        ENTRAR
-                    </Text>
-                    </TouchableOpacity>
+                <TouchableOpacity
+                style={styles.button}
+                onPress={() => router.push('/tabela')}
+                >
+                <Text style={styles.buttonText}>
+                    ENTRAR
+                </Text>
+                </TouchableOpacity>
         </View>            
     </View>
   );
