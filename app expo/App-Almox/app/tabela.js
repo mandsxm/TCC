@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 25,
     textAlign: 'center',
-    color: '#F28705',
+    color: '#1D3273',
     marginBottom: 25,
     fontFamily: 'Poppins_700Bold',
   },
