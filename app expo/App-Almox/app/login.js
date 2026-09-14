@@ -8,6 +8,9 @@ import { router } from 'expo-router';
 
 export default function Login() {
 
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
   const [emailFocus, setEmailFocus] = useState(false);
   const [senhaFocus, setSenhaFocus] = useState(false);
 
@@ -19,6 +22,38 @@ export default function Login() {
     Poppins_700Bold,
   });
 
+  const fazerLogin = async () => {
+  try {
+    const resposta = await fetch('http://10.154.20.90:5000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: email,
+        senha: senha,
+      }),
+    });
+
+    const dados = await resposta.json();
+
+    if (!resposta.ok) {
+      alert(dados.mensagem || 'Email ou senha incorretos');
+      return;
+    }
+
+    if (dados.tipo === 'admin') {
+      router.replace('/tabela');
+    } else if (dados.tipo === 'usuario') {
+      router.replace('/tabela');
+    }
+
+  } catch (erro) {
+    console.log(erro);
+    alert('Não foi possível conectar ao servidor');
+  }
+};
+
   if (!fontsLoaded) {
     return null;
   }
@@ -29,18 +64,20 @@ export default function Login() {
       <Image
         source={require('../assets/industria.png')}
         style={styles.background}
-        resizeMode="cover"
+        blurRadius={3}
       />
 
       <LinearGradient
         colors={[
-          'rgba(29, 50, 115, 0.25)',
-          'rgba(82, 104, 168, 0.95)'
+          'rgba(15, 25, 55, 0.4)',
+          'rgba(30, 40, 75, 0.95)'
         ]}
         start={{ x: 0, y: 0 }}
         end={{ x: 0, y: 1 }}
         style={styles.gradient}
-      >
+      />
+
+      <View style={styles.content}>
 
         <Text style={styles.paragraph1}>
           BOAS-VINDAS
@@ -58,7 +95,7 @@ export default function Login() {
           />
 
           <Text style={styles.email}>
-            Email
+            E-mail:
           </Text>
 
           <TextInput
@@ -68,12 +105,14 @@ export default function Login() {
             ]}
             placeholder="seunome@empresa.com"
             placeholderTextColor="#888"
+            value={email}
+            onChangeText={setEmail}
             onFocus={() => setEmailFocus(true)}
             onBlur={() => setEmailFocus(false)}
           />
 
           <Text style={styles.senha}>
-            Senha
+            Senha:
           </Text>
 
           <TextInput
@@ -83,13 +122,15 @@ export default function Login() {
             ]}
             placeholder="Digite sua senha"
             placeholderTextColor="#888"
+            value={senha}
+            onChangeText={setSenha}
             onFocus={() => setSenhaFocus(true)}
             onBlur={() => setSenhaFocus(false)}
           />
 
           <TouchableOpacity
             style={styles.button}
-            onPress={() => router.push('/tabela')}
+            onPress={fazerLogin}
           >
             <Text style={styles.buttonText}>
               ENTRAR
@@ -98,7 +139,8 @@ export default function Login() {
 
         </View>
 
-      </LinearGradient>
+      </View>
+
     </View>
   );
 }
@@ -106,18 +148,31 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#000000",
   },
 
   background: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-  },
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+  opacity: 0.5,
+  resizeMode: 'cover',
+},
 
   gradient: {
-    ...StyleSheet.absoluteFillObject,
-    justifyContent: 'center',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+
+  content: {
+    flex: 1,
+    width: '100%',
     alignItems: 'center',
+    paddingTop: 100,
+    paddingBottom: 60,
   },
 
   paragraph1: {

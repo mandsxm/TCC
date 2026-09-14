@@ -773,3 +773,299 @@
 {"_e":"metro:bundling:progress","_t":1788962025458,"id":"18","progress":0,"total":1,"current":0}
 {"_e":"metro:bundling:progress","_t":1788962025568,"id":"18","progress":0,"total":1,"current":0}
 {"_e":"metro:bundling:failed","_t":1788962025583,"id":"18","message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\cadastro.js: Identifier 'useFonts' has already been declared. (4:9)\n\n  2 | import { useFonts} from '@expo-google-fonts/inter';\n  3 | import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';\n> 4 | import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';\n    |          ^\n  5 | import { MaterialIcons } from '@expo/vector-icons';\n  6 | import { useState } from 'react';\n  7 | import { router } from 'expo-router';","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1789382523533,"format":"v0-jsonl","version":"57.0.23"}
+{"_e":"env:mode","_t":1789382523535,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1789382523553,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1789382530055,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1789382538151,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1789382542285,"plugins":[]}
+{"_e":"metro:instantiate","_t":1789382555589,"atlas":false,"workers":3,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1789382656915,"id":"4","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1789382656916,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789382656922,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789382663219,"id":"4","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1789382663326,"id":"4","progress":0.010000000000000002,"total":3,"current":1}
+{"_e":"metro:bundling:progress","_t":1789382663342,"id":"4","progress":0.04000000000000001,"total":3,"current":2}
+{"_e":"metro:bundling:progress","_t":1789382663443,"id":"4","progress":0.09765625,"total":16,"current":5}
+{"_e":"metro:bundling:progress","_t":1789382663543,"id":"4","progress":0.09765625,"total":44,"current":10}
+{"_e":"metro:bundling:progress","_t":1789382663643,"id":"4","progress":0.09765625,"total":48,"current":12}
+{"_e":"metro:bundling:progress","_t":1789382663732,"id":"4","progress":0.09765625,"total":48,"current":13}
+{"_e":"metro:bundling:progress","_t":1789382663832,"id":"4","progress":0.09765625,"total":147,"current":14}
+{"_e":"metro:bundling:progress","_t":1789382663938,"id":"4","progress":0.09765625,"total":151,"current":16}
+{"_e":"metro:bundling:progress","_t":1789382664038,"id":"4","progress":0.09765625,"total":152,"current":19}
+{"_e":"metro:bundling:progress","_t":1789382664140,"id":"4","progress":0.09765625,"total":152,"current":21}
+{"_e":"metro:bundling:progress","_t":1789382664244,"id":"4","progress":0.09765625,"total":152,"current":22}
+{"_e":"metro:bundling:progress","_t":1789382664353,"id":"4","progress":0.09765625,"total":155,"current":24}
+{"_e":"metro:bundling:progress","_t":1789382664457,"id":"4","progress":0.09765625,"total":156,"current":27}
+{"_e":"metro:bundling:progress","_t":1789382664568,"id":"4","progress":0.09765625,"total":156,"current":29}
+{"_e":"metro:bundling:progress","_t":1789382664675,"id":"4","progress":0.09765625,"total":159,"current":36}
+{"_e":"metro:bundling:progress","_t":1789382664774,"id":"4","progress":0.09765625,"total":178,"current":47}
+{"_e":"metro:bundling:progress","_t":1789382664879,"id":"4","progress":0.09765625,"total":191,"current":51}
+{"_e":"metro:bundling:progress","_t":1789382664978,"id":"4","progress":0.09765625,"total":195,"current":55}
+{"_e":"metro:bundling:progress","_t":1789382665090,"id":"4","progress":0.09765625,"total":197,"current":59}
+{"_e":"metro:bundling:progress","_t":1789382665196,"id":"4","progress":0.09765625,"total":211,"current":64}
+{"_e":"metro:bundling:progress","_t":1789382665304,"id":"4","progress":0.10424500794305133,"total":223,"current":72}
+{"_e":"metro:bundling:progress","_t":1789382665416,"id":"4","progress":0.10824384850358877,"total":231,"current":76}
+{"_e":"metro:bundling:progress","_t":1789382665516,"id":"4","progress":0.11673611111111111,"total":240,"current":82}
+{"_e":"metro:bundling:progress","_t":1789382665616,"id":"4","progress":0.15156459413787074,"total":262,"current":102}
+{"_e":"metro:bundling:progress","_t":1789382665716,"id":"4","progress":0.18589844570468392,"total":276,"current":119}
+{"_e":"metro:bundling:progress","_t":1789382665816,"id":"4","progress":0.21567365699511634,"total":295,"current":137}
+{"_e":"metro:bundling:progress","_t":1789382665929,"id":"4","progress":0.2634204640147362,"total":302,"current":155}
+{"_e":"metro:bundling:progress","_t":1789382666029,"id":"4","progress":0.29879757239896193,"total":311,"current":170}
+{"_e":"metro:bundling:progress","_t":1789382666129,"id":"4","progress":0.31443794217835613,"total":321,"current":180}
+{"_e":"metro:bundling:progress","_t":1789382666232,"id":"4","progress":0.34967267011089925,"total":323,"current":191}
+{"_e":"metro:bundling:progress","_t":1789382666332,"id":"4","progress":0.3578280592546618,"total":331,"current":198}
+{"_e":"metro:bundling:progress","_t":1789382666435,"id":"4","progress":0.36,"total":335,"current":201}
+{"_e":"metro:bundling:progress","_t":1789382666539,"id":"4","progress":0.36359100022276675,"total":335,"current":202}
+{"_e":"metro:bundling:progress","_t":1789382666639,"id":"4","progress":0.36359100022276675,"total":344,"current":206}
+{"_e":"metro:bundling:progress","_t":1789382666767,"id":"4","progress":0.3718884693775268,"total":346,"current":211}
+{"_e":"metro:bundling:progress","_t":1789382666867,"id":"4","progress":0.3871604938271605,"total":360,"current":224}
+{"_e":"metro:bundling:progress","_t":1789382666980,"id":"4","progress":0.4157783152676999,"total":366,"current":236}
+{"_e":"metro:bundling:progress","_t":1789382667081,"id":"4","progress":0.4157783152676999,"total":393,"current":245}
+{"_e":"metro:bundling:progress","_t":1789382667183,"id":"4","progress":0.4157783152676999,"total":411,"current":263}
+{"_e":"metro:bundling:progress","_t":1789382667288,"id":"4","progress":0.4290402682011074,"total":429,"current":281}
+{"_e":"metro:bundling:progress","_t":1789382667392,"id":"4","progress":0.4295562454346238,"total":444,"current":291}
+{"_e":"metro:bundling:progress","_t":1789382667498,"id":"4","progress":0.44150597683337467,"total":453,"current":301}
+{"_e":"metro:bundling:progress","_t":1789382667598,"id":"4","progress":0.44150597683337467,"total":471,"current":308}
+{"_e":"metro:bundling:progress","_t":1789382667699,"id":"4","progress":0.44150597683337467,"total":508,"current":315}
+{"_e":"metro:bundling:progress","_t":1789382667799,"id":"4","progress":0.44150597683337467,"total":588,"current":325}
+{"_e":"metro:bundling:progress","_t":1789382667899,"id":"4","progress":0.44150597683337467,"total":593,"current":332}
+{"_e":"metro:bundling:progress","_t":1789382668008,"id":"4","progress":0.44150597683337467,"total":612,"current":336}
+{"_e":"metro:bundling:progress","_t":1789382668109,"id":"4","progress":0.44150597683337467,"total":614,"current":339}
+{"_e":"metro:bundling:progress","_t":1789382668210,"id":"4","progress":0.44150597683337467,"total":628,"current":347}
+{"_e":"metro:bundling:progress","_t":1789382668311,"id":"4","progress":0.44150597683337467,"total":634,"current":355}
+{"_e":"metro:bundling:progress","_t":1789382668411,"id":"4","progress":0.44150597683337467,"total":635,"current":361}
+{"_e":"metro:bundling:progress","_t":1789382668511,"id":"4","progress":0.44150597683337467,"total":636,"current":363}
+{"_e":"metro:bundling:progress","_t":1789382668649,"id":"4","progress":0.44150597683337467,"total":636,"current":364}
+{"_e":"metro:bundling:progress","_t":1789382668755,"id":"4","progress":0.44150597683337467,"total":638,"current":368}
+{"_e":"metro:bundling:progress","_t":1789382668867,"id":"4","progress":0.44150597683337467,"total":639,"current":372}
+{"_e":"metro:bundling:progress","_t":1789382668967,"id":"4","progress":0.44150597683337467,"total":641,"current":383}
+{"_e":"metro:bundling:progress","_t":1789382669068,"id":"4","progress":0.44150597683337467,"total":648,"current":398}
+{"_e":"metro:bundling:progress","_t":1789382669168,"id":"4","progress":0.44150597683337467,"total":655,"current":415}
+{"_e":"metro:bundling:progress","_t":1789382669276,"id":"4","progress":0.44150597683337467,"total":655,"current":428}
+{"_e":"metro:bundling:progress","_t":1789382669380,"id":"4","progress":0.4538932649391664,"total":662,"current":446}
+{"_e":"metro:bundling:progress","_t":1789382669480,"id":"4","progress":0.4761205665410302,"total":671,"current":463}
+{"_e":"metro:bundling:progress","_t":1789382669580,"id":"4","progress":0.4761205665410302,"total":696,"current":474}
+{"_e":"metro:bundling:progress","_t":1789382669683,"id":"4","progress":0.4761205665410302,"total":725,"current":482}
+{"_e":"metro:bundling:progress","_t":1789382669782,"id":"4","progress":0.4761205665410302,"total":734,"current":491}
+{"_e":"metro:bundling:progress","_t":1789382669882,"id":"4","progress":0.4761205665410302,"total":750,"current":500}
+{"_e":"metro:bundling:progress","_t":1789382669992,"id":"4","progress":0.4761205665410302,"total":761,"current":509}
+{"_e":"metro:bundling:progress","_t":1789382670097,"id":"4","progress":0.4761205665410302,"total":805,"current":526}
+{"_e":"metro:bundling:progress","_t":1789382670343,"id":"4","progress":0.4761205665410302,"total":805,"current":527}
+{"_e":"metro:bundling:progress","_t":1789382670444,"id":"4","progress":0.4761205665410302,"total":805,"current":543}
+{"_e":"metro:bundling:progress","_t":1789382670549,"id":"4","progress":0.4931315382768196,"total":806,"current":566}
+{"_e":"metro:bundling:progress","_t":1789382670649,"id":"4","progress":0.5368101166552298,"total":808,"current":592}
+{"_e":"metro:bundling:progress","_t":1789382670749,"id":"4","progress":0.5368101166552298,"total":847,"current":611}
+{"_e":"metro:bundling:progress","_t":1789382670849,"id":"4","progress":0.5502435583768653,"total":852,"current":632}
+{"_e":"metro:bundling:progress","_t":1789382670949,"id":"4","progress":0.5603294444317634,"total":863,"current":646}
+{"_e":"metro:bundling:progress","_t":1789382671056,"id":"4","progress":0.5629296352717191,"total":873,"current":655}
+{"_e":"metro:bundling:progress","_t":1789382671165,"id":"4","progress":0.5684681279919375,"total":882,"current":665}
+{"_e":"metro:bundling:progress","_t":1789382671270,"id":"4","progress":0.5684681279919375,"total":893,"current":672}
+{"_e":"metro:bundling:progress","_t":1789382671371,"id":"4","progress":0.5684681279919375,"total":906,"current":676}
+{"_e":"metro:bundling:progress","_t":1789382671497,"id":"4","progress":0.5684681279919375,"total":909,"current":683}
+{"_e":"metro:bundling:progress","_t":1789382671608,"id":"4","progress":0.5703138343933829,"total":915,"current":691}
+{"_e":"metro:bundling:progress","_t":1789382671708,"id":"4","progress":0.5703138343933829,"total":922,"current":695}
+{"_e":"metro:bundling:progress","_t":1789382671815,"id":"4","progress":0.570575991453149,"total":932,"current":704}
+{"_e":"metro:bundling:progress","_t":1789382671926,"id":"4","progress":0.570575991453149,"total":946,"current":711}
+{"_e":"metro:bundling:progress","_t":1789382672030,"id":"4","progress":0.5844901199698042,"total":947,"current":724}
+{"_e":"metro:bundling:progress","_t":1789382672133,"id":"4","progress":0.5844901199698042,"total":962,"current":728}
+{"_e":"metro:bundling:progress","_t":1789382672234,"id":"4","progress":0.5844901199698042,"total":992,"current":738}
+{"_e":"metro:bundling:progress","_t":1789382672334,"id":"4","progress":0.5844901199698042,"total":993,"current":745}
+{"_e":"metro:bundling:progress","_t":1789382672433,"id":"4","progress":0.5844901199698042,"total":999,"current":751}
+{"_e":"metro:bundling:progress","_t":1789382672533,"id":"4","progress":0.5844901199698042,"total":1001,"current":757}
+{"_e":"metro:bundling:progress","_t":1789382672636,"id":"4","progress":0.5844901199698042,"total":1012,"current":768}
+{"_e":"metro:bundling:progress","_t":1789382672781,"id":"4","progress":0.5868195199816015,"total":1013,"current":776}
+{"_e":"metro:bundling:progress","_t":1789382672881,"id":"4","progress":0.5868195199816015,"total":1023,"current":782}
+{"_e":"metro:bundling:progress","_t":1789382672984,"id":"4","progress":0.602248539672276,"total":1027,"current":797}
+{"_e":"metro:bundling:progress","_t":1789382673084,"id":"4","progress":0.6148503077062926,"total":1033,"current":810}
+{"_e":"metro:bundling:progress","_t":1789382673186,"id":"4","progress":0.6455881374468296,"total":1033,"current":830}
+{"_e":"metro:bundling:progress","_t":1789382673295,"id":"4","progress":0.6652638228410429,"total":1036,"current":845}
+{"_e":"metro:bundling:progress","_t":1789382673396,"id":"4","progress":0.6685651762261413,"total":1042,"current":852}
+{"_e":"metro:bundling:progress","_t":1789382673496,"id":"4","progress":0.6705564607811152,"total":1049,"current":859}
+{"_e":"metro:bundling:progress","_t":1789382673596,"id":"4","progress":0.6748006194033418,"total":1053,"current":865}
+{"_e":"metro:bundling:progress","_t":1789382673697,"id":"4","progress":0.6947072675831439,"total":1057,"current":881}
+{"_e":"metro:bundling:progress","_t":1789382673797,"id":"4","progress":0.6954871536736726,"total":1066,"current":889}
+{"_e":"metro:bundling:progress","_t":1789382673904,"id":"4","progress":0.7030297957963142,"total":1071,"current":898}
+{"_e":"metro:bundling:progress","_t":1789382674004,"id":"4","progress":0.7068449931412896,"total":1080,"current":908}
+{"_e":"metro:bundling:progress","_t":1789382674104,"id":"4","progress":0.718741064255661,"total":1084,"current":919}
+{"_e":"metro:bundling:progress","_t":1789382674206,"id":"4","progress":0.718741064255661,"total":1107,"current":929}
+{"_e":"metro:bundling:progress","_t":1789382674307,"id":"4","progress":0.718741064255661,"total":1112,"current":937}
+{"_e":"metro:bundling:progress","_t":1789382674412,"id":"4","progress":0.7344736620775322,"total":1112,"current":953}
+{"_e":"metro:bundling:progress","_t":1789382674512,"id":"4","progress":0.7406148250903838,"total":1119,"current":963}
+{"_e":"metro:bundling:progress","_t":1789382674614,"id":"4","progress":0.7427920284950797,"total":1122,"current":967}
+{"_e":"metro:bundling:progress","_t":1789382674715,"id":"4","progress":0.7427920284950797,"total":1138,"current":973}
+{"_e":"metro:bundling:progress","_t":1789382674846,"id":"4","progress":0.7427920284950797,"total":1139,"current":976}
+{"_e":"metro:bundling:progress","_t":1789382674946,"id":"4","progress":0.754954398748105,"total":1144,"current":994}
+{"_e":"metro:bundling:progress","_t":1789382675047,"id":"4","progress":0.754954398748105,"total":1165,"current":1004}
+{"_e":"metro:bundling:progress","_t":1789382675159,"id":"4","progress":0.754954398748105,"total":1174,"current":1015}
+{"_e":"metro:bundling:progress","_t":1789382675266,"id":"4","progress":0.7600642509389745,"total":1178,"current":1027}
+{"_e":"metro:bundling:progress","_t":1789382675400,"id":"4","progress":0.7678361901846751,"total":1188,"current":1041}
+{"_e":"metro:bundling:progress","_t":1789382675510,"id":"4","progress":0.7777644503926668,"total":1194,"current":1053}
+{"_e":"metro:bundling:progress","_t":1789382675620,"id":"4","progress":0.7857073119752261,"total":1206,"current":1069}
+{"_e":"metro:bundling:progress","_t":1789382675720,"id":"4","progress":0.7920707720266069,"total":1218,"current":1084}
+{"_e":"metro:bundling:progress","_t":1789382675825,"id":"4","progress":0.8027925177802328,"total":1221,"current":1094}
+{"_e":"metro:bundling:progress","_t":1789382675925,"id":"4","progress":0.8027925177802328,"total":1245,"current":1111}
+{"_e":"metro:bundling:progress","_t":1789382676025,"id":"4","progress":0.8027925177802328,"total":1279,"current":1122}
+{"_e":"metro:bundling:progress","_t":1789382676126,"id":"4","progress":0.8027925177802328,"total":1283,"current":1131}
+{"_e":"metro:bundling:progress","_t":1789382676226,"id":"4","progress":0.8027925177802328,"total":1287,"current":1150}
+{"_e":"metro:bundling:progress","_t":1789382676326,"id":"4","progress":0.8037572486993336,"total":1295,"current":1161}
+{"_e":"metro:bundling:progress","_t":1789382676429,"id":"4","progress":0.8302798109747916,"total":1295,"current":1180}
+{"_e":"metro:bundling:progress","_t":1789382676529,"id":"4","progress":0.848786865569273,"total":1296,"current":1194}
+{"_e":"metro:bundling:progress","_t":1789382676635,"id":"4","progress":0.8646993953005809,"total":1298,"current":1207}
+{"_e":"metro:bundling:progress","_t":1789382676738,"id":"4","progress":0.8646993953005809,"total":1361,"current":1218}
+{"_e":"metro:bundling:progress","_t":1789382676839,"id":"4","progress":0.8646993953005809,"total":1362,"current":1229}
+{"_e":"metro:bundling:progress","_t":1789382676939,"id":"4","progress":0.8646993953005809,"total":1366,"current":1256}
+{"_e":"metro:bundling:progress","_t":1789382677039,"id":"4","progress":0.8646993953005809,"total":1370,"current":1272}
+{"_e":"metro:bundling:progress","_t":1789382677147,"id":"4","progress":0.8715604269572131,"total":1385,"current":1293}
+{"_e":"metro:bundling:progress","_t":1789382677249,"id":"4","progress":0.8911468428183373,"total":1393,"current":1315}
+{"_e":"metro:bundling:progress","_t":1789382677349,"id":"4","progress":0.9118404352511185,"total":1397,"current":1334}
+{"_e":"metro:bundling:progress","_t":1789382677450,"id":"4","progress":0.9315132868887455,"total":1406,"current":1357}
+{"_e":"metro:bundling:progress","_t":1789382677561,"id":"4","progress":0.9360835807079704,"total":1416,"current":1370}
+{"_e":"metro:bundling:progress","_t":1789382677661,"id":"4","progress":0.9569644813788858,"total":1425,"current":1394}
+{"_e":"metro:bundling:progress","_t":1789382677765,"id":"4","progress":0.9682011436341341,"total":1435,"current":1412}
+{"_e":"metro:bundling:progress","_t":1789382677865,"id":"4","progress":0.972472072264172,"total":1443,"current":1423}
+{"_e":"metro:bundling:progress","_t":1789382677965,"id":"4","progress":0.972472072264172,"total":1462,"current":1438}
+{"_e":"metro:bundling:progress","_t":1789382678069,"id":"4","progress":0.972472072264172,"total":1463,"current":1442}
+{"_e":"metro:bundling:progress","_t":1789382678135,"id":"4","progress":0.9728458036908588,"total":1463,"current":1443}
+{"_e":"metro:bundling:progress","_t":1789382678235,"id":"4","progress":0.9728458036908588,"total":1480,"current":1451}
+{"_e":"metro:bundling:progress","_t":1789382678337,"id":"4","progress":0.9728458036908588,"total":1483,"current":1453}
+{"_e":"metro:bundling:progress","_t":1789382678437,"id":"4","progress":0.9772201778539824,"total":1484,"current":1467}
+{"_e":"metro:bundling:progress","_t":1789382678538,"id":"4","progress":0.9919355167840016,"total":1485,"current":1479}
+{"_e":"metro:bundling:failed","_t":1789382678616,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Identifier 'useFonts' has already been declared. (4:9)\n\n  2 | import { useFonts} from '@expo-google-fonts/inter';\n  3 | import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';\n> 4 | import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';\n    |          ^\n  5 | import { MaterialIcons } from '@expo/vector-icons';\n  6 | import { useState } from 'react';\n  7 | import { router } from 'expo-router';","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1789383736256,"id":"7","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1789383736256,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789383736259,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789383736360,"id":"7","progress":0.02221246301775148,"total":208,"current":31}
+{"_e":"metro:bundling:progress","_t":1789383736459,"id":"7","progress":0.07879347491535857,"total":399,"current":112}
+{"_e":"metro:bundling:progress","_t":1789383736559,"id":"7","progress":0.14216608438591774,"total":488,"current":184}
+{"_e":"metro:bundling:progress","_t":1789383736661,"id":"7","progress":0.3200941327754351,"total":631,"current":357}
+{"_e":"metro:bundling:progress","_t":1789383736761,"id":"7","progress":0.36798496972318334,"total":816,"current":495}
+{"_e":"metro:bundling:progress","_t":1789383736862,"id":"7","progress":0.5139087507967921,"total":883,"current":633}
+{"_e":"metro:bundling:progress","_t":1789383736963,"id":"7","progress":0.6142740086062511,"total":985,"current":772}
+{"_e":"metro:bundling:progress","_t":1789383737063,"id":"7","progress":0.6808168739859384,"total":1075,"current":887}
+{"_e":"metro:bundling:progress","_t":1789383737185,"id":"7","progress":0.7175910115429274,"total":1210,"current":1025}
+{"_e":"metro:bundling:progress","_t":1789383737285,"id":"7","progress":0.7780760074248899,"total":1323,"current":1167}
+{"_e":"metro:bundling:progress","_t":1789383737385,"id":"7","progress":0.8541622335169402,"total":1359,"current":1256}
+{"_e":"metro:bundling:progress","_t":1789383737485,"id":"7","progress":0.955806622764583,"total":1432,"current":1400}
+{"_e":"metro:bundling:progress","_t":1789383737603,"id":"7","progress":0.999,"total":1490,"current":1490}
+{"_e":"metro:bundling:done","_t":1789383738200,"id":"7","total":1490,"ms":1943.8825}
+{"_e":"metro:client_log","_t":1789383743357,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789383743412,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789383743655,"level":"warn","data":["Linking requires a build-time setting `scheme` in the project's Expo config (app.config.js or app.json) for production apps, if it's left blank, your app may crash. The scheme does not apply to development in the Expo client but you should add it as soon as you start working with Linking to avoid creating a broken build. Learn more: https://docs.expo.dev/guides/linking/"]}
+{"_e":"metro:bundling:failed","_t":1789384213788,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Missing semicolon. (218:2)\n\n  216 | ```\n  217 |\n> 218 | Só ajustei os espaços/indentação — a estrutura, a lógica e o conteúdo continuam exatamente iguais.\n      |   ^","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:client_log","_t":1789384219551,"level":"error","data":["[TypeError: '' is not a function]"]}
+{"_e":"metro:bundling:failed","_t":1789384232084,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unterminated template. (215:3)\n\n  213 |   },\n  214 | });\n> 215 | ```\n      |    ^","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1789384659249,"id":"n","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1789384659249,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789384659250,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1789384659332,"id":"n","total":1,"ms":83.5406}
+{"_e":"metro:client_log","_t":1789384664489,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789384664489,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789384664489,"level":"warn","data":["Linking requires a build-time setting `scheme` in the project's Expo config (app.config.js or app.json) for production apps, if it's left blank, your app may crash. The scheme does not apply to development in the Expo client but you should add it as soon as you start working with Linking to avoid creating a broken build. Learn more: https://docs.expo.dev/guides/linking/"]}
+{"_e":"metro:client_log","_t":1789384667923,"level":"error","data":["[ReferenceError: Property 'usuarioFocus' doesn't exist]"]}
+{"_e":"metro:client_log","_t":1789384716052,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789384716105,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:bundling:failed","_t":1789384897395,"id":"4","message":"Unable to resolve \"./assets/Fiep_Logo.png\" from \"app\\cadastro.js\"\n  91 |         {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}\n  92 |                 <Card style = {styles.card}>\n> 93 |           <Image source = {require ('./assets/Fiep_Logo.png')}\n     |                                      ^\n  94 |           style={styles.img_logo}/>\n  95 |\n  96 |           <Text style={styles.label}>E-mail:</Text>","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mapp\\cadastro.js\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./assets/Fiep_Logo.png\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"./assets/Fiep_Logo.png","originModulePath":"app\\cadastro.js"}
+{"_e":"metro:bundling:failed","_t":1789384952415,"id":"4","message":"Unable to resolve \"./assets/Fiep_Logo.png\" from \"app\\cadastro.js\"\n  91 |         {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}\n  92 |         <Card style={styles.card}>\n> 93 |           <Image source={require('./assets/Fiep_Logo.png')}\n     |                                   ^\n  94 |             style={styles.img_logo} />\n  95 |\n  96 |           <Text style={styles.label}>E-mail:</Text>","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mapp\\cadastro.js\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./assets/Fiep_Logo.png\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"./assets/Fiep_Logo.png","originModulePath":"app\\cadastro.js"}
+{"_e":"metro:bundling:failed","_t":1789384975417,"id":"4","message":"Unable to resolve \"./assets/Fiep_Logo.png\" from \"app\\cadastro.js\"\n  91 |         {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}\n  92 |         <Card style={styles.card}>\n> 93 |           <Image source={require('./assets/Fiep_Logo.png')}\n     |                                   ^\n  94 |             style={styles.img_logo} />\n  95 |\n  96 |           <Text style={styles.label}>E-mail:</Text>","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mapp\\cadastro.js\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./assets/Fiep_Logo.png\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"./assets/Fiep_Logo.png","originModulePath":"app\\cadastro.js"}
+{"_e":"metro:bundling:failed","_t":1789384979103,"id":"4","message":"Unable to resolve \"./assets/Fiep_Logo.png\" from \"app\\cadastro.js\"\n  91 |         {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}\n  92 |         <Card style={styles.card}>\n> 93 |           <Image source={require('./assets/Fiep_Logo.png')}\n     |                                   ^\n  94 |             style={styles.img_logo} />\n  95 |\n  96 |           <Text style={styles.label}>E-mail:</Text>","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mapp\\cadastro.js\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./assets/Fiep_Logo.png\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"./assets/Fiep_Logo.png","originModulePath":"app\\cadastro.js"}
+{"_e":"metro:bundling:failed","_t":1789384981620,"id":"4","message":"Unable to resolve \"./assets/Fiep_Logo.png\" from \"app\\cadastro.js\"\n  91 |         {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}\n  92 |         <Card style={styles.card}>\n> 93 |           <Image source={require('./assets/Fiep_Logo.png')}\n     |                                   ^\n  94 |             style={styles.img_logo} />\n  95 |\n  96 |           <Text style={styles.label}>E-mail:</Text>","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mapp\\cadastro.js\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./assets/Fiep_Logo.png\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"./assets/Fiep_Logo.png","originModulePath":"app\\cadastro.js"}
+{"_e":"metro:client_log","_t":1789385032332,"level":"error","data":["[ReferenceError: Property 'Card' doesn't exist]"]}
+{"_e":"metro:client_log","_t":1789385039034,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385039275,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385047864,"level":"error","data":["[ReferenceError: Property 'card' doesn't exist]"]}
+{"_e":"metro:client_log","_t":1789385052928,"level":"error","data":["[ReferenceError: Property 'Card' doesn't exist]"]}
+{"_e":"metro:client_log","_t":1789385085006,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385085057,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385088152,"level":"error","data":["[ReferenceError: Property 'Card' doesn't exist]"]}
+{"_e":"metro:bundling:failed","_t":1789385103437,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (204:2)\n\n  202 |     borderRadius: 10,\n  203 |   }\n> 204 |   label\n      |   ^\n  205 | });","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385120085,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (204:2)\n\n  202 |     borderRadius: 10,\n  203 |   }\n> 204 |   label: {\n      |   ^\n  205 |         color: '#1D3273',\n  206 |     fontWeight: 'bold',\n  207 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385122471,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (204:2)\n\n  202 |     borderRadius: 10,\n  203 |   }\n> 204 |   label: {\n      |   ^\n  205 |     color: '#1D3273',\n  206 |     fontWeight: 'bold',\n  207 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385144304,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (204:2)\n\n  202 |     borderRadius: 10,\n  203 |   }\n> 204 |   label: {\n      |   ^\n  205 |     color: '#1D3273',\n  206 |     fontWeight: 'bold',\n  207 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385154327,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (206:2)\n\n  204 |     borderRadius: 10,\n  205 |   }\n> 206 |   label: {\n      |   ^\n  207 |     color: '#1D3273',\n  208 |     fontWeight: 'bold',\n  209 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385157815,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (206:2)\n\n  204 |     borderRadius: 10,\n  205 |   }\n> 206 |   label: {\n      |   ^\n  207 |     color: '#1D3273',\n  208 |     fontWeight: 'bold',\n  209 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385158823,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (210:2)\n\n  208 |     borderRadius: 10,\n  209 |   }\n> 210 |   label: {\n      |   ^\n  211 |     color: '#1D3273',\n  212 |     fontWeight: 'bold',\n  213 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385165501,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (210:2)\n\n  208 |     borderRadius: 10,\n  209 |   }\n> 210 |   label: {\n      |   ^\n  211 |     color: '#1D3273',\n  212 |     fontWeight: 'bold',\n  213 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385171740,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (210:2)\n\n  208 |     borderRadius: 10,\n  209 |   }\n> 210 |   label: {\n      |   ^\n  211 |     color: '#1D3273',\n  212 |     fontWeight: 'bold',\n  213 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385181043,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (210:2)\n\n  208 |     borderRadius: 10,\n  209 |   }\n> 210 |   label: {\n      |   ^\n  211 |     color: '#1D3273',\n  212 |     fontWeight: 'bold',\n  213 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385185210,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (210:2)\n\n  208 |     borderRadius: 10,\n  209 |   }\n> 210 |   label: {\n      |   ^\n  211 |     color: '#1D3273',\n  212 |     fontWeight: 'bold',\n  213 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385191661,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (210:2)\n\n  208 |     borderRadius: 10,\n  209 |   }\n> 210 |   label: {\n      |   ^\n  211 |     color: '#1D3273',\n  212 |     fontWeight: 'bold',\n  213 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385197596,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (210:2)\n\n  208 |     borderRadius: 10,\n  209 |   }\n> 210 |   label: {\n      |   ^\n  211 |     color: '#1D3273',\n  212 |     fontWeight: 'bold',\n  213 |     fontSize: 15,","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:client_log","_t":1789385269299,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385269373,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385285929,"level":"error","data":["[ReferenceError: Property 'Card' doesn't exist]"]}
+{"_e":"metro:client_log","_t":1789385315628,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385315714,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385317791,"level":"error","data":["[Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.\n\nCheck the render method of `Cadastro(./cadastro.js)`.]"]}
+{"_e":"metro:client_log","_t":1789385337510,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385337578,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:bundling:failed","_t":1789385571405,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (215:2)\n\n  213 |     marginLeft: 10\n  214 |   }\n> 215 |   input.email\n      |   ^\n  216 | });","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385573946,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (215:2)\n\n  213 |     marginLeft: 10\n  214 |   }\n> 215 |   input.email: {\n      |   ^\n  216 |     \n  217 |   }\n  218 | });","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385576225,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (215:7)\n\n  213 |     marginLeft: 10\n  214 |   },\n> 215 |   input.email: {\n      |        ^\n  216 |\n  217 |   }\n  218 | });","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385578721,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (215:7)\n\n  213 |     marginLeft: 10\n  214 |   },\n> 215 |   input.email: {\n      |        ^\n  216 |\n  217 |   },\n  218 | });","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385611564,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (216:2)\n\n  214 |   },\n  215 |   inu\n> 216 |   input_email: {\n      |   ^\n  217 |\n  218 |   },\n  219 |   input_senha: {","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385615315,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (215:6)\n\n  213 |     marginLeft: 10\n  214 |   },\n> 215 |   inut.usuario\n      |       ^\n  216 |   input_email: {\n  217 |\n  218 |   },","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385619053,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (215:6)\n\n  213 |     marginLeft: 10\n  214 |   },\n> 215 |   inut.usuario: {\n      |       ^\n  216 |     \n  217 |   }\n  218 |   input_email: {","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1789385621403,"id":"4","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Unexpected token, expected \",\" (215:6)\n\n  213 |     marginLeft: 10\n  214 |   },\n> 215 |   inut.usuario: {\n      |       ^\n  216 |     \n  217 |   },\n  218 |   input_email: {","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1789385668146,"id":"1d","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1789385668148,"id":"1d","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1789385668204,"id":"1d","total":1,"ms":58.0789}
+{"_e":"metro:client_log","_t":1789385674123,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385674123,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385674123,"level":"warn","data":["Linking requires a build-time setting `scheme` in the project's Expo config (app.config.js or app.json) for production apps, if it's left blank, your app may crash. The scheme does not apply to development in the Expo client but you should add it as soon as you start working with Linking to avoid creating a broken build. Learn more: https://docs.expo.dev/guides/linking/"]}
+{"_e":"metro:bundling:started","_t":1789385885321,"id":"1g","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1789385885321,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385885323,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385885445,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385885671,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385885771,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385885871,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385885971,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385886071,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385886171,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789385886271,"id":"1g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1789385886404,"id":"1g","total":1,"ms":1082.7075}
+{"_e":"metro:client_log","_t":1789385892894,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385892894,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789385892951,"level":"warn","data":["Linking requires a build-time setting `scheme` in the project's Expo config (app.config.js or app.json) for production apps, if it's left blank, your app may crash. The scheme does not apply to development in the Expo client but you should add it as soon as you start working with Linking to avoid creating a broken build. Learn more: https://docs.expo.dev/guides/linking/"]}
+{"_e":"metro:bundling:started","_t":1789386090677,"id":"1j","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1789386090677,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386090680,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386090814,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386091044,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386091144,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386091246,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386091349,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386091449,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386091549,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386091649,"id":"1j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:failed","_t":1789386091723,"id":"1j","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Private name #FFFFFF is not defined. (112:32)\n\n  110 |           <TouchableOpacity style={styles.botao}\n  111 |             onPress={() => router.replace('/tabela')}>\n> 112 |             <Text style={styles.#FFFFFF}>CADASTRAR</Text>\n      |                                 ^\n  113 |           </TouchableOpacity>\n  114 |\n  115 |         </Card>","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1789386109589,"id":"1k","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1789386109589,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386109591,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386109696,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386109934,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386110034,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386110134,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386110235,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386110335,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386110435,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386110538,"id":"1k","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:failed","_t":1789386110576,"id":"1k","message":"SyntaxError: C:\\Users\\Aluno\\TCC\\app expo\\App-Almox\\app\\cadastro.js: Private names are only allowed in property accesses (`obj.#FFFFFF`) or in `in` expressions (`#FFFFFF in obj`). (112:25)\n\n  110 |           <TouchableOpacity style={styles.botao}\n  111 |             onPress={() => router.replace('/tabela')}>\n> 112 |             <Text style={#FFFFFF}>CADASTRAR</Text>\n      |                          ^\n  113 |           </TouchableOpacity>\n  114 |\n  115 |         </Card>","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1789386121862,"id":"1l","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1789386121862,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386121865,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386121965,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386122168,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386122268,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386122368,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386122468,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386122568,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386122668,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1789386122788,"id":"1l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1789386122863,"id":"1l","total":1,"ms":1000.6201}
+{"_e":"metro:client_log","_t":1789386132251,"level":"warn","data":["Route \"./editor.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789386132251,"level":"warn","data":["Route \"./usuarios.js\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1789386132251,"level":"warn","data":["Linking requires a build-time setting `scheme` in the project's Expo config (app.config.js or app.json) for production apps, if it's left blank, your app may crash. The scheme does not apply to development in the Expo client but you should add it as soon as you start working with Linking to avoid creating a broken build. Learn more: https://docs.expo.dev/guides/linking/"]}
+{"_e":"metro:client_log","_t":1789386214489,"level":"warn","data":["Linking requires a build-time setting `scheme` in the project's Expo config (app.config.js or app.json) for production apps, if it's left blank, your app may crash. The scheme does not apply to development in the Expo client but you should add it as soon as you start working with Linking to avoid creating a broken build. Learn more: https://docs.expo.dev/guides/linking/"]}
+{"_e":"metro:client_log","_t":1789386214546,"level":"warn","data":["Linking requires a build-time setting `scheme` in the project's Expo config (app.config.js or app.json) for production apps, if it's left blank, your app may crash. The scheme does not apply to development in the Expo client but you should add it as soon as you start working with Linking to avoid creating a broken build. Learn more: https://docs.expo.dev/guides/linking/"]}

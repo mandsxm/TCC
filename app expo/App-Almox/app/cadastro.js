@@ -1,19 +1,21 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
+import { Card } from 'react-native-paper';
 import { useFonts} from '@expo-google-fonts/inter';
 import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
-import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';
+import { Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useState } from 'react';
 import { router } from 'expo-router';
 
 export default function Cadastro() {
 
-  const [fontsLoaded] = useFonts({
-    Poppins_700Bold,
-    Montserrat_400Regular,
+  var [fontsLoaded] = useFonts({
+    Poppins_700Bold: Poppins_700Bold,
+    Montserrat_400Regular: Montserrat_400Regular,
+    Montserrat_700Bold: Montserrat_700Bold,
   });
 
-  const [menuAberto, setMenuAberto] = useState(false);
+  var [menuAberto, setMenuAberto] = useState(false);
 
   return (
     <View style={styles.background}>
@@ -79,51 +81,39 @@ export default function Cadastro() {
           </TouchableOpacity>
         </View>
       )}
-        <View>
-            <Text style={styles.titulo}>
-                {"Boas-vindas ao\nCadastro de Usuários!"} {/* \n serve pra quebrar a linha, "Cadastro de Usuários!" fica embaixo de "Boas-vindas ao"*/}
-            </Text>
+      <View>
+        <Text style={styles.titulo}>
+          {"Boas-vindas ao\nCadastro de Usuários!"} {/* \n serve pra quebrar a linha, "Cadastro de Usuários!" fica embaixo de "Boas-vindas ao"*/}
+        </Text>
 
-            {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}
-            <Text style={styles.email}>
-                Email
-            </Text>
-        
-            <TextInput
-                style={[
-                    styles.input,
-                    emailFocus && styles.inputFocus
-                ]}
-                placeholder="seunome@empresa.com"
-                placeholderTextColor="#888"
-                onFocus={() => setEmailFocus(true)}
-                onBlur={() => setEmailFocus(false)}
-                />
-        
-                <Text style={styles.senha}>
-                    Senha
-                </Text>
-        
-                <TextInput
-                style={[
-                    styles.input,
-                    senhaFocus && styles.inputFocus
-                ]}
-                placeholder="Digite sua senha"
-                placeholderTextColor="#888"
-                onFocus={() => setSenhaFocus(true)}
-                onBlur={() => setSenhaFocus(false)}
-                />
-        
-                <TouchableOpacity
-                style={styles.button}
-                onPress={() => router.push('/tabela')}
-                >
-                <Text style={styles.buttonText}>
-                    ENTRAR
-                </Text>
-                </TouchableOpacity>
-        </View>            
+        {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}
+        <Card style={styles.card}>
+
+          <Text style={styles.label}>Usuário:</Text>
+          <TextInput
+            placeholder="Digite o usuário:"
+            style={styles.input_user}
+          />
+
+          <Text style={styles.label}>E-mail Profissional:</Text>
+          <TextInput
+            placeholder="Digite o email:"
+            style={styles.input_email}
+          />
+
+          <Text style={styles.label}>Senha:</Text>
+          <TextInput
+            placeholder="Digite a senha:"
+            style={styles.input_senha}
+          />
+
+          <TouchableOpacity style={styles.botao}
+            onPress={() => router.replace('/tabela')}>
+            <Text style={styles.btntexto}>CADASTRAR</Text>
+          </TouchableOpacity>
+
+        </Card>
+      </View>
     </View>
   );
 }
@@ -137,7 +127,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     textAlign: 'center',
     color: '#1D3273',
-    marginBottom: 25,
+    marginBottom: 105,
     fontFamily: 'Poppins_700Bold',
   },
   navbar: {
@@ -208,4 +198,70 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  card: {
+    backgroundColor: '#FFFFFF',
+    padding: 20,
+    justifyContent: 'center',
+    marginLeft: 40,
+    marginRight: 40,
+    borderWidth: 1,
+    borderColor: '#F28705',
+    borderRadius: 8,
+    overflow: 'hidden'
+  },
+  label: {
+    color: '#1D3273',
+    fontWeight: 'bold',
+    fontSize: 15,
+    marginBottom: 5,
+    marginLeft: 10
+  },
+  input_user: {
+    width: 240,
+    height: 40,
+    alignSelf: 'center',
+    backgroundColor: 'white',
+    placeholderTextColor: 0.5,
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: '#1D3273',
+    marginBottom: 20,
+  },
+  input_email: {
+    width: 240,
+    height: 40,
+    alignSelf: 'center',
+    backgroundColor: 'white',
+    placeholderTextColor: 0.5,
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: '#1D3273',
+    marginBottom: 20,
+  },
+  input_senha: {
+    width: 240,
+    height: 40,
+    alignSelf: 'center',
+    backgroundColor: 'white',
+    placeholderTextColor: 0.5,
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: '#1D3273',
+    marginBottom: 20,
+  },
+  botao: {
+    marginBottom: 10,
+    backgroundColor: '#1D3273',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    width: 240,
+    height: 40,
+    borderRadius: 5,
+  },
+  btntexto: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 15,
+    alignSelf: 'center'
+  }
 });
