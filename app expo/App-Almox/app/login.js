@@ -70,7 +70,7 @@ export default function Login() {
       <LinearGradient
         colors={[
           'rgba(15, 25, 55, 0.4)',
-          'rgba(30, 40, 75, 0.95)'
+          'rgba(26, 39, 87, 0.95)'
         ]}
         start={{ x: 0, y: 0 }}
         end={{ x: 0, y: 1 }}
@@ -80,11 +80,11 @@ export default function Login() {
       <View style={styles.content}>
 
         <Text style={styles.paragraph1}>
-          BOAS-VINDAS
+          BOAS-VINDAS AO
         </Text>
 
         <Text style={styles.paragraph2}>
-          AO SENAI ALMOXARIFADO
+          SENAI ALMOXARIFADO
         </Text>
 
         <View style={styles.inputContainer}>
@@ -177,11 +177,13 @@ const styles = StyleSheet.create({
 
   paragraph1: {
     width: '90%',
-    fontSize: 23,
-    fontFamily: 'Montserrat_400Regular',
+    fontSize: 24,
+    fontFamily: 'sans-serif',
+    letterSpacing: 4,
+    marginLeft: 40,
+    marginTop: 20,
     color: '#F0F1F2',
     textAlign: 'left',
-    marginBottom: 2,
     textShadowColor: 'rgba(0, 0, 0, 0.3)',
     textShadowOffset: { width: 3, height: 3 },
     textShadowRadius: 0,
@@ -189,11 +191,13 @@ const styles = StyleSheet.create({
 
   paragraph2: {
     width: '90%',
-    fontSize: 25,
-    fontFamily: 'Montserrat_700Bold',
+    fontSize: 38,
+    marginLeft: 40,
+    fontWeight: 'bold',
+    fontFamily: 'sans-serif',
     color: '#F0F1F2',
     textAlign: 'left',
-    marginBottom: 30,
+    marginBottom: 50,
     textShadowColor: 'rgba(0, 0, 0, 0.3)',
     textShadowOffset: { width: 3, height: 3 },
     textShadowRadius: 0,
