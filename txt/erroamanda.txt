@@ -10,5 +10,5 @@ erro dia 22/09 - prof vivi
 
 PS C:\Users\Aluno\TCCdasala> cd "C:\Users\Aluno\TCCdasala"
 npx create-expo-app@latest meu-app --template blank
-cd meu-app (cd app expo)
+cd meu-app (cd ".\app expo\")
 npx expo start 
