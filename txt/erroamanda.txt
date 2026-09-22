@@ -1,8 +1,8 @@
 quando der erro igual o dia 09/09:
 
 cd "app expo\App-Almox"
-Remove-Item -Recurse -Force node_modules
-npm.cmd cache clean --force
+Remove-Item -Recurse -Force node_modules ======
+npm.cmd cache clean --force ======
 npm.cmd install
 npx.cmd expo start
 
