@@ -313,6 +313,320 @@ def entrada():
 
     return jsonify({"success": True}), 200
 
+# ENTRADA DO APP
+@app.route('/entrada_app', methods=['POST'])
+def entrada():
+
+    nome = request.form.get('nome')
+    categoria = request.form.get('categoria')
+    qtde = request.form.get('qtde')
+    responsavel = request.form.get('responsavel')
+    estoque_min = request.form.get('estoque_min')
+    preco = request.form.get('preco')
+    descricao = request.form.get('descricao')
+    tipo = request.form.get('tipo')
+
+    # VALIDAÇÃO
+    if not nome or not qtde or not responsavel or not tipo:
+        return jsonify({
+            "success": False,
+            "erro": "Campos obrigatórios"
+        }), 400
+
+    try:
+        qtde = int(qtde)
+
+        if qtde <= 0:
+            return jsonify({
+                "success": False,
+                "erro": "Quantidade deve ser maior que zero"
+            }), 400
+
+        estoque_min = int(estoque_min) if estoque_min else 0
+        preco = float(preco) if preco else 0
+
+    except ValueError:
+        return jsonify({
+            "success": False,
+            "erro": "Quantidade, preço ou estoque mínimo inválido"
+        }), 400
+
+    conexao = None
+    cursor = None
+
+    try:
+
+        conexao = get_db()
+        cursor = conexao.cursor()
+
+        # PROCURA O PRODUTO
+        cursor.execute("""
+            SELECT
+                qtde,
+                preco,
+                categoria,
+                estoque_min,
+                descricao
+            FROM estoque
+            WHERE nome = %s
+        """, (nome,))
+
+        produto = cursor.fetchone()
+
+        # =========================
+        # ENTRADA
+        # =========================
+
+        if tipo == "entrada":
+
+            if produto:
+
+                qtde_atual = produto[0]
+                preco_atual = produto[1] or 0
+                categoria_atual = produto[2]
+                estoque_min_atual = produto[3]
+                descricao_atual = produto[4]
+
+                nova_qtde = qtde_atual + qtde
+
+                novo_preco = (
+                    float(preco_atual) + preco
+                )
+
+                categoria_final = (
+                    categoria
+                    if categoria
+                    else categoria_atual
+                )
+
+                estoque_min_final = (
+                    estoque_min
+                    if estoque_min
+                    else estoque_min_atual
+                )
+
+                descricao_final = (
+                    descricao
+                    if descricao
+                    else descricao_atual
+                )
+
+                cursor.execute("""
+                    UPDATE estoque
+                    SET
+                        qtde = %s,
+                        estoque_min = %s,
+                        categoria = %s,
+                        preco = %s,
+                        descricao = %s,
+                        responsavel = %s
+                    WHERE nome = %s
+                """, (
+                    nova_qtde,
+                    estoque_min_final,
+                    categoria_final,
+                    novo_preco,
+                    descricao_final,
+                    responsavel,
+                    nome
+                ))
+
+            else:
+
+                cursor.execute("""
+                    INSERT INTO estoque
+                    (
+                        responsavel,
+                        nome,
+                        categoria,
+                        qtde,
+                        estoque_min,
+                        descricao,
+                        preco
+                    )
+                    VALUES (%s, %s, %s, %s, %s, %s, %s)
+                """, (
+                    responsavel,
+                    nome,
+                    categoria,
+                    qtde,
+                    estoque_min,
+                    descricao,
+                    preco
+                ))
+
+        # =========================
+        # SAÍDA
+        # =========================
+
+        elif tipo == "saida":
+
+            if not produto:
+
+                return jsonify({
+                    "success": False,
+                    "erro": "Produto não encontrado"
+                }), 404
+
+            qtde_atual = produto[0]
+            preco_atual = produto[1] or 0
+            categoria_atual = produto[2]
+            estoque_min_atual = produto[3]
+            descricao_atual = produto[4]
+
+            if qtde_atual < qtde:
+
+                return jsonify({
+                    "success": False,
+                    "erro": "Estoque insuficiente"
+                }), 400
+
+            nova_qtde = qtde_atual - qtde
+
+            novo_preco = (
+                float(preco_atual) - preco
+            )
+
+            if novo_preco < 0:
+                novo_preco = 0
+
+            categoria_final = (
+                categoria
+                if categoria
+                else categoria_atual
+            )
+
+            estoque_min_final = (
+                estoque_min
+                if estoque_min
+                else estoque_min_atual
+            )
+
+            descricao_final = (
+                descricao
+                if descricao
+                else descricao_atual
+            )
+
+            cursor.execute("""
+                UPDATE estoque
+                SET
+                    qtde = %s,
+                    estoque_min = %s,
+                    categoria = %s,
+                    preco = %s,
+                    descricao = %s,
+                    responsavel = %s
+                WHERE nome = %s
+            """, (
+                nova_qtde,
+                estoque_min_final,
+                categoria_final,
+                novo_preco,
+                descricao_final,
+                responsavel,
+                nome
+            ))
+
+        else:
+
+            return jsonify({
+                "success": False,
+                "erro": "Tipo inválido"
+            }), 400
+
+        conexao.commit()
+
+        return jsonify({
+            "success": True,
+            "mensagem": "Operação realizada com sucesso"
+        }), 200
+
+    except Exception as erro:
+
+        print("ERRO ENTRADA:", repr(erro))
+
+        if conexao:
+            conexao.rollback()
+
+        return jsonify({
+            "success": False,
+            "erro": str(erro)
+        }), 500
+
+    finally:
+
+        if cursor:
+            cursor.close()
+
+        if conexao:
+            conexao.close()
+
+
+# TABELA DO APP
+@app.route('/tabela_app', methods=['GET'])
+def tabela_app():
+
+    conexao = None
+    cursor = None
+
+    try:
+        conexao = get_db()
+        cursor = conexao.cursor()
+
+        cursor.execute("""
+            SELECT
+                id,
+                responsavel,
+                nome,
+                categoria,
+                qtde,
+                estoque_min,
+                descricao,
+                preco
+            FROM estoque
+            ORDER BY id ASC
+        """)
+
+        resultado = cursor.fetchall()
+
+        produtos = []
+
+        for item in resultado:
+
+            produtos.append({
+                "id": item[0],
+                "responsavel": item[1],
+                "nome": item[2],
+                "categoria": item[3],
+                "qtde": item[4],
+                "estoque_min": item[5],
+                "descricao": item[6],
+                "preco": float(item[7]) if item[7] is not None else 0
+            })
+
+        return jsonify({
+            "success": True,
+            "produtos": produtos
+        }), 200
+
+    except Exception as erro:
+
+        print("ERRO TABELA APP:", repr(erro))
+
+        return jsonify({
+            "success": False,
+            "erro": "Erro ao buscar produtos"
+        }), 500
+
+    finally:
+
+        if cursor:
+            cursor.close()
+
+        if conexao:
+            conexao.close()
+
 # EXCLUIR ITEM
 @app.route('/excluir/<int:id>', methods=['DELETE'])
 def excluir(id):
