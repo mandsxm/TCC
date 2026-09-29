@@ -6,6 +6,8 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.secret_key = "brasil"
+app.config['JSON_AS_ASCII'] = False
+
 
 # GERAR SENHA BCRYPT
 def gerar_hash(senha_texto):
