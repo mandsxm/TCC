@@ -315,7 +315,7 @@ def entrada():
 
 # ENTRADA DO APP
 @app.route('/entrada_app', methods=['POST'])
-def entrada():
+def entrada_app():
 
     nome = request.form.get('nome')
     categoria = request.form.get('categoria')
