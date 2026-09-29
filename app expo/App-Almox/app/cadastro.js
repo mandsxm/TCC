@@ -24,7 +24,7 @@ export default function Cadastro() {
     return;
     }
 
-    const resposta = await fetch('http://10.154.20.17:5000/cadastro_app', {
+    const resposta = await fetch('http://10.154.20.23:5000/cadastro_app', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json',
@@ -140,20 +140,24 @@ export default function Cadastro() {
         {/* FORMULÁRIO DE CADASTRO DE USUÁRIOS */}
         <Card style={styles.card}>
 
-<TextInput
-  placeholder="Digite o usuário:"
-  style={[
-    styles.input_user,
-    usuarioFocus && styles.inputFocus
-  ]}
-  value={usuario}
-  onChangeText={setUsuario}
-  onFocus={() => setUsuarioFocus(true)}
-  onBlur={() => setUsuarioFocus(false)}
-/>
+          <Text style={styles.label}>USUÁRIO</Text>
 
           <TextInput
-            placeholder="Digite o email:"
+            placeholder="Digite o usuário"
+            style={[
+              styles.input_user,
+              usuarioFocus && styles.inputFocus
+            ]}
+            value={usuario}
+            onChangeText={setUsuario}
+            onFocus={() => setUsuarioFocus(true)}
+            onBlur={() => setUsuarioFocus(false)}
+          />
+
+          <Text style={styles.label}>E-MAIL</Text>
+
+          <TextInput
+            placeholder="Digite o email"
             style={[
               styles.input_email,
               emailFocus && styles.inputFocus
@@ -165,8 +169,10 @@ export default function Cadastro() {
             onBlur={() => setEmailFocus(false)}
           />
 
+          <Text style={styles.label}>SENHA</Text>
+
           <TextInput
-            placeholder="Digite a senha:"
+            placeholder="Digite a senha"
             style={[
               styles.input_senha,
               senhaFocus && styles.inputFocus
@@ -177,6 +183,7 @@ export default function Cadastro() {
             onFocus={() => setSenhaFocus(true)}
             onBlur={() => setSenhaFocus(false)}
           />
+
 
                 <TouchableOpacity
                     style={styles.botao}
@@ -219,11 +226,12 @@ const styles = StyleSheet.create({
         zIndex: 10,
     },
     link: {
-        color: '#FFFFFF',
-        fontSize: 14,
-        marginLeft: 25,
-        fontFamily: 'Poppins_700Bold',
+      color: '#FFFFFF',
+      fontSize: 14,
+      marginLeft: 22,
+      fontFamily: 'Poppins_700Bold',
     },
+
     sidebar: {
         position: 'absolute',
         left: 0,
@@ -281,18 +289,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginLeft: 40,
         marginRight: 40,
-        borderWidth: 1,
+        borderWidth: 2,
         borderColor: '#F28705',
         borderRadius: 8,
         overflow: 'hidden',
     },
     label: {
-        color: '#1D3273',
-        fontWeight: 'bold',
-        fontSize: 15,
-        marginBottom: 5,
-        marginLeft: 10,
+      color: '#1D3273',
+      fontFamily: 'Poppins_700Bold',
+      fontSize: 14,
+      marginBottom: 5,
+      width: 240,
+      alignSelf: 'center',
     },
+
     input: {
     width: 240,
     height: 40,

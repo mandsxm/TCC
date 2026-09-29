@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
   tabela: {
     marginHorizontal: 15,
     backgroundColor: '#FFFFFF',
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#F28705',
     borderRadius: 8,
     overflow: 'hidden',

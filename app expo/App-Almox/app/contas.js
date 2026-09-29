@@ -125,7 +125,7 @@ export default function Usuarios() {
       )}
 
       <Text style={styles.titulo}>
-        Bem-vindo(a) ao Almoxarifado!
+        Boas-Vindas ao Gerenciador de Contas!
       </Text>
 
       <View style={styles.tabela}>
@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
   tabela: {
     marginHorizontal: 15,
     backgroundColor: '#FFFFFF',
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#F28705',
     borderRadius: 8,
     overflow: 'hidden',

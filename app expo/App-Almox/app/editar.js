@@ -1,24 +1,130 @@
 import { useState } from 'react';
-import {View, Text, StyleSheet, ScrollView, TouchableOpacity,} from 'react-native';
+import {View,Text,StyleSheet,TouchableOpacity,TextInput,ScrollView,Alert,} from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 
 export default function Editar() {
+
   const [menuAberto, setMenuAberto] = useState(false);
 
-  const produtos = [
-    {
-      nome: '...',
-      responsavel: '..',
-      vermais: '...',
-    },
-  ];
+  // Tipo da operação
+  const [tipo, setTipo] = useState('entrada');
+
+  // Campos do produto
+  const [nome, setNome] = useState('');
+  const [responsavel, setResponsavel] = useState('');
+  const [descricao, setDescricao] = useState('');
+  const [categoria, setCategoria] = useState('');
+  const [preco, setPreco] = useState('');
+  const [quantidade, setQuantidade] = useState('');
+  const [estoqueMin, setEstoqueMin] = useState('');
+
+  // Controle de envio
+  const [carregando, setCarregando] = useState(false);
+
+
+  // CONFIRMAR OPERAÇÃO
+
+  const confirmarOperacao = async () => {
+
+    if (!nome || !quantidade || !responsavel) {
+      Alert.alert(
+        'Atenção',
+        'Preencha o nome, a quantidade e o responsável.'
+      );
+      return;
+    }
+
+    const quantidadeNumero = parseInt(quantidade);
+
+    if (isNaN(quantidadeNumero) || quantidadeNumero <= 0) {
+      Alert.alert(
+        'Atenção',
+        'Digite uma quantidade válida.'
+      );
+      return;
+    }
+
+    setCarregando(true);
+
+    try {
+
+      const resposta = await fetch(
+        'http://10.154.20.23:5000/entrada_app ',
+        {
+          method: 'POST',
+
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+
+          body: new URLSearchParams({
+            nome: nome,
+            categoria: categoria,
+            qtde: quantidade,
+            responsavel: responsavel,
+            estoque_min: estoqueMin || '0',
+            preco: preco || '0',
+            descricao: descricao,
+            tipo: tipo,
+          }).toString(),
+        }
+      );
+
+      const dados = await resposta.json();
+
+      console.log('STATUS:', resposta.status);
+      console.log('RESPOSTA:', dados);
+
+      if (!resposta.ok) {
+        Alert.alert(
+          'Erro',
+          dados.erro || 'Não foi possível realizar a operação.'
+        );
+        return;
+      }
+
+      Alert.alert(
+        'Sucesso',
+        tipo === 'entrada'
+          ? 'Entrada realizada com sucesso!'
+          : 'Saída realizada com sucesso!'
+      );
+
+      // Limpa os campos
+      setNome('');
+      setResponsavel('');
+      setDescricao('');
+      setCategoria('');
+      setPreco('');
+      setQuantidade('');
+      setEstoqueMin('');
+
+      // Vai para a tabela
+      router.replace('/tabela');
+
+    } catch (erro) {
+
+      console.log('ERRO:', erro);
+
+      Alert.alert(
+        'Erro',
+        'Não foi possível conectar ao servidor.'
+      );
+
+    } finally {
+      setCarregando(false);
+    }
+  };
+
 
   return (
     <View style={styles.container}>
 
       {/* NAVBAR */}
+
       <View style={styles.navbar}>
+
         <TouchableOpacity
           style={styles.menuButton}
           onPress={() => setMenuAberto(!menuAberto)}
@@ -30,26 +136,50 @@ export default function Editar() {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push('/tabela')}>
-          <Text style={styles.link}>ESTOQUE</Text>
+
+        <TouchableOpacity
+          onPress={() => router.push('/tabela')}
+        >
+          <Text style={styles.link}>
+            ESTOQUE
+          </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push('/editar')}>
-          <Text style={styles.link}>EDITAR</Text>
+
+        <TouchableOpacity
+          onPress={() => router.push('/editar')}
+        >
+          <Text style={styles.link}>
+            EDITAR
+          </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push('/contas')}>
-          <Text style={styles.link}>CONTAS</Text>
+
+        <TouchableOpacity
+          onPress={() => router.push('/contas')}
+        >
+          <Text style={styles.link}>
+            CONTAS
+          </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push('/cadastro')}>
-          <Text style={styles.link}>CADASTRO</Text>
+
+        <TouchableOpacity
+          onPress={() => router.push('/cadastro')}
+        >
+          <Text style={styles.link}>
+            CADASTRO
+          </Text>
         </TouchableOpacity>
+
       </View>
 
       {/* SIDEBAR */}
+
       {menuAberto && (
+
         <View style={styles.sidebar}>
+
           <TouchableOpacity
             style={styles.closeButton}
             onPress={() => setMenuAberto(false)}
@@ -61,16 +191,27 @@ export default function Editar() {
             />
           </TouchableOpacity>
 
-          <Text style={styles.sidebarTitulo}>USUÁRIO</Text>
 
-          <Text style={styles.usuario}>Róger</Text>
+          <Text style={styles.sidebarTitulo}>
+            USUÁRIO
+          </Text>
 
-          <Text style={styles.tipo}>Usuário</Text>
+
+          <Text style={styles.usuario}>
+            Róger
+          </Text>
+
+
+          <Text style={styles.tipoUsuario}>
+            Usuário
+          </Text>
+
 
           <TouchableOpacity
             style={styles.logout}
             onPress={() => router.replace('/login')}
           >
+
             <MaterialIcons
               name="logout"
               size={20}
@@ -80,117 +221,281 @@ export default function Editar() {
             <Text style={styles.logoutTexto}>
               DESLOGAR
             </Text>
+
           </TouchableOpacity>
+
         </View>
+
       )}
 
-      {/* TÍTULO */}
-      <Text style={styles.titulo}>
-        {'Boas-vindas ao\nEditar almoxarifado!'}
-      </Text>
+      {/* CONTEÚDO */}
 
-      {/* TABELA */}
-      <ScrollView horizontal>
-        <View style={styles.tabela}>
+      <ScrollView
+        contentContainerStyle={styles.conteudo}
+        showsVerticalScrollIndicator={false}
+      >
 
-          {/* CABEÇALHO */}
-          <View style={styles.linha}>
-            <Text style={[styles.celula, styles.cabecalho]}>
-              Nome
+        {/* TÍTULO */}
+
+        <Text style={styles.titulo}>
+          {'Boas-vindas ao\nEditar almoxarifado!'}
+        </Text>
+
+        {/* ENTRADA / SAÍDA */}
+
+        <View style={styles.botoesTipo}>
+
+          <TouchableOpacity
+            style={[
+              styles.botaoTipo,
+              tipo === 'entrada' && styles.botaoSelecionado
+            ]}
+            onPress={() => setTipo('entrada')}
+          >
+
+            <Text style={styles.textoBotao}>
+              ENTRADA
             </Text>
 
-            <Text style={[styles.celula, styles.cabecalho]}>
-              Responsável
+          </TouchableOpacity>
+
+
+          <TouchableOpacity
+            style={[
+              styles.botaoTipo,
+              tipo === 'saida' && styles.botaoSelecionado
+            ]}
+            onPress={() => setTipo('saida')}
+          >
+
+            <Text style={styles.textoBotao}>
+              SAÍDA
             </Text>
 
-            <Text style={[styles.celula, styles.cabecalho]}>
-              Ver mais
-            </Text>
-
-        </View>    
-
-
-          {/* PRODUTOS */}
-          {produtos.map((produto, index) => (
-            <View style={styles.linha} key={index}>
-
-              <Text style={styles.celula}>
-                {produto.nome}
-              </Text>
-
-              <Text style={styles.celula}>
-                {produto.responsavel}
-              </Text>
-
-              <Text style={styles.celula}>
-                {produto.vermais}
-              </Text>
-
-            </View>
-          ))}
+          </TouchableOpacity>
 
         </View>
+
+        {/* CARD */}
+
+        <View style={styles.card}>
+
+          <Text style={styles.produtosTitulo}>
+            {tipo === 'entrada'
+              ? 'ENTRADA DE PRODUTO'
+              : 'SAÍDA DE PRODUTO'}
+          </Text>
+
+
+          {/* NOME */}
+
+          <Text style={styles.label}>
+            NOME
+          </Text>
+
+          <TextInput
+            style={styles.campo}
+            placeholder="Digite o nome."
+            placeholderTextColor="#8A8A8A"
+            value={nome}
+            onChangeText={setNome}
+          />
+
+
+          {/* RESPONSÁVEL */}
+
+          <Text style={styles.label}>
+            RESPONSÁVEL
+          </Text>
+
+          <TextInput
+            style={styles.campo}
+            placeholder="Digite o responsável."
+            placeholderTextColor="#8A8A8A"
+            value={responsavel}
+            onChangeText={setResponsavel}
+          />
+
+          {/* CATEGORIA */}
+
+          <Text style={styles.label}>
+            CATEGORIA
+          </Text>
+
+          <TextInput
+            style={styles.campo}
+            placeholder="Digite a categoria."
+            placeholderTextColor="#8A8A8A"
+            value={categoria}
+            onChangeText={setCategoria}
+          />
+
+
+          {/* PREÇO */}
+
+          <Text style={styles.label}>
+            PREÇO
+          </Text>
+
+          <TextInput
+            style={styles.campo}
+            placeholder="Digite o preço."
+            placeholderTextColor="#8A8A8A"
+            value={preco}
+            onChangeText={setPreco}
+            keyboardType="numeric"
+          />
+
+
+          {/* QUANTIDADE */}
+
+          <Text style={styles.label}>
+            QUANTIDADE
+          </Text>
+
+          <TextInput
+            style={styles.campo}
+            placeholder="Digite a quantidade."
+            placeholderTextColor="#8A8A8A"
+            value={quantidade}
+            onChangeText={setQuantidade}
+            keyboardType="numeric"
+          />
+
+
+          {/* ESTOQUE MÍNIMO */}
+
+          <Text style={styles.label}>
+            ESTOQUE MÍNIMO
+          </Text>
+
+          <TextInput
+            style={styles.campo}
+            placeholder="Digite o estoque mínimo."
+            placeholderTextColor="#8A8A8A"
+            value={estoqueMin}
+            onChangeText={setEstoqueMin}
+            keyboardType="numeric"
+          />
+
+                    {/* DESCRIÇÃO */}
+
+          <Text style={styles.label}>
+            DESCRIÇÃO
+          </Text>
+
+          <TextInput
+            style={[
+              styles.campo,
+              styles.campoDescricao
+            ]}
+            placeholder="Descrição do produto."
+            placeholderTextColor="#8A8A8A"
+            value={descricao}
+            onChangeText={setDescricao}
+            multiline
+          />
+
+
+          {/* ========================= */}
+          {/* CONFIRMAR */}
+          {/* ========================= */}
+
+          <TouchableOpacity
+            style={[
+              styles.botaoConfirmar,
+              carregando && styles.botaoDesabilitado
+            ]}
+            onPress={confirmarOperacao}
+            disabled={carregando}
+          >
+
+            <Text style={styles.textoConfirmar}>
+              {carregando
+                ? 'ENVIANDO...'
+                : 'CONFIRMAR'}
+            </Text>
+
+          </TouchableOpacity>
+
+        </View>
+
       </ScrollView>
 
     </View>
   );
 }
 
-const styles = StyleSheet.create({
 
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#F0F1F2',
   },
 
-  /* NAVBAR */
   navbar: {
-    height: 70,
+    height: 60,
     backgroundColor: '#1D3273',
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 15,
-    gap: 18,
-    marginTop: 18,
+    paddingHorizontal: 25,
+    paddingLeft: 10,
+    marginTop: 30,
+    marginBottom: 30,
+    zIndex: 10,
   },
 
   menuButton: {
     marginRight: 10,
   },
 
-  /* SIDEBAR */
+  link: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    marginLeft: 22,
+    fontFamily: 'Poppins_700Bold',
+  },
+
   sidebar: {
     position: 'absolute',
-    top: 0,
     left: 0,
+    top: 30,
     width: 250,
     height: '100%',
     backgroundColor: '#1D3273',
-    padding: 20,
-    zIndex: 10,
+    zIndex: 100,
+    paddingTop: 20,
+    paddingHorizontal: 20,
   },
 
   closeButton: {
-    alignSelf: 'flex-end',
-    marginBottom: 30,
+    position: 'absolute',
+    right: 10,
+    top: 2,
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   sidebarTitulo: {
     color: '#FFFFFF',
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
+    fontSize: 22,
+    fontFamily: 'Poppins_700Bold',
+    marginBottom: 30,
   },
 
   usuario: {
     color: '#FFFFFF',
     fontSize: 18,
+    fontFamily: 'Poppins_700Bold',
     marginBottom: 5,
   },
 
-  tipo: {
-    color: '#CCCCCC',
+  tipoUsuario: {
+    color: '#FFFFFF',
     fontSize: 14,
+    fontFamily: 'Montserrat_400Regular',
     marginBottom: 30,
   },
 
@@ -198,45 +503,120 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
-    marginTop: 20,
+    paddingVertical: 12,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255,255,255,0.3)',
   },
 
   logoutTexto: {
-    color: ' #FFFFFF',
-    fontWeight: 'bold',
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontFamily: 'Poppins_700Bold',
   },
 
-  
+  conteudo: {
+    paddingBottom: 40,
+  },
+
   titulo: {
     fontSize: 25,
     textAlign: 'center',
     color: '#1D3273',
-    marginTop: 30,
-    marginBottom: 30,
+    marginBottom: 25,
+    fontFamily: 'Poppins_700Bold',
+  },
+
+  botoesTipo: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 16,
+    marginBottom: 20,
+  },
+
+  botaoTipo: {
+    minWidth: 110,
+    height: 42,
+    borderRadius: 5,
+    borderColor: '#1D3273',
+    borderWidth: 2,
+    backgroundColor: '#51608C',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 5,
+    paddingHorizontal: 12,
+  },
+
+  botaoSelecionado: {
+    backgroundColor: '#1D3273',
+    borderColor: '#F28705',
+  },
+
+  textoBotao: {
+    fontSize: 15,
+    textAlign: 'center',
+    color: '#FFFFFF',
     fontWeight: 'bold',
   },
 
-  
-  tabela: {
+  card: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 15,
+    padding: 20,
+    marginHorizontal: 22,
     borderWidth: 2,
-    borderColor: ' #F28705',
-    marginHorizontal: 9,
-    borderRadius: 10,
+    borderColor: '#F28705',
   },
 
-  linha: {
+  produtosTitulo: {
+    color: '#1D3273',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    textAlign: 'center',
+  },
+
+  label: {
+    color: '#1D3273',
+    fontWeight: 'bold',
+    marginTop: 20,
+    marginBottom: 8,
+  },
+
+  campo: {
+    backgroundColor: '#FFFFFF',
+    borderWidth: 2,
+    borderColor: '#4A64A3',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    height: 40,
+    color: '#333333',
+  },
+
+  campoDescricao: {
+    height: 80,
+    textAlignVertical: 'top',
+    paddingTop: 10,
+  },
+
+  botaoConfirmar: {
+    height: 45,
+    backgroundColor: '#1D3273',
+    borderRadius: 6,
+    marginTop: 30,
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
   },
 
-  celula: {
-    width: 150,
-    padding: 13,
-    borderWidth: 1,
-    borderColor: ' #F28705',
+  botaoDesabilitado: {
+    opacity: 0.6,
   },
 
-  cabecalho: {
-    backgroundColor: '#FFFFF',
+  textoConfirmar: {
+    color: '#FFFFFF',
+    fontSize: 15,
     fontWeight: 'bold',
   },
 

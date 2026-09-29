@@ -3417,3 +3417,280 @@
 {"_e":"metro:client_log","_t":1790078152726,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
 {"_e":"metro:client_log","_t":1790078173292,"level":"log","data":["STATUS:","201"]}
 {"_e":"metro:client_log","_t":1790078173413,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"mensagem\": \"Usuário cadastrado com sucesso\"}"]}
+{"_e":"root:init","_t":1790677770658,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790677770680,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790677770701,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790677778063,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790677786963,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790677791425,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790677805168,"atlas":false,"workers":3,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790677820353,"id":"2","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790677820354,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790677820359,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790677827206,"id":"2","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1790677827323,"id":"2","progress":0.04000000000000001,"total":2,"current":2}
+{"_e":"metro:bundling:progress","_t":1790677827443,"id":"2","progress":0.09,"total":10,"current":3}
+{"_e":"metro:bundling:progress","_t":1790677827543,"id":"2","progress":0.1695501730103806,"total":17,"current":7}
+{"_e":"metro:bundling:progress","_t":1790677827644,"id":"2","progress":0.1695501730103806,"total":21,"current":8}
+{"_e":"metro:bundling:progress","_t":1790677827751,"id":"2","progress":0.18367346938775508,"total":21,"current":9}
+{"_e":"metro:bundling:progress","_t":1790677827859,"id":"2","progress":0.18367346938775508,"total":123,"current":12}
+{"_e":"metro:bundling:progress","_t":1790677827959,"id":"2","progress":0.18367346938775508,"total":124,"current":12}
+{"_e":"metro:bundling:progress","_t":1790677828060,"id":"2","progress":0.18367346938775508,"total":130,"current":14}
+{"_e":"metro:bundling:progress","_t":1790677828175,"id":"2","progress":0.18367346938775508,"total":133,"current":17}
+{"_e":"metro:bundling:progress","_t":1790677828279,"id":"2","progress":0.18367346938775508,"total":141,"current":18}
+{"_e":"metro:bundling:progress","_t":1790677828381,"id":"2","progress":0.18367346938775508,"total":145,"current":19}
+{"_e":"metro:bundling:progress","_t":1790677828496,"id":"2","progress":0.18367346938775508,"total":146,"current":23}
+{"_e":"metro:bundling:progress","_t":1790677828601,"id":"2","progress":0.18367346938775508,"total":151,"current":26}
+{"_e":"metro:bundling:progress","_t":1790677828707,"id":"2","progress":0.18367346938775508,"total":157,"current":29}
+{"_e":"metro:bundling:progress","_t":1790677828806,"id":"2","progress":0.18367346938775508,"total":164,"current":32}
+{"_e":"metro:bundling:progress","_t":1790677828920,"id":"2","progress":0.18367346938775508,"total":180,"current":38}
+{"_e":"metro:bundling:progress","_t":1790677829032,"id":"2","progress":0.18367346938775508,"total":182,"current":39}
+{"_e":"metro:bundling:progress","_t":1790677829083,"id":"2","progress":0.18367346938775508,"total":182,"current":40}
+{"_e":"metro:bundling:progress","_t":1790677829200,"id":"2","progress":0.18367346938775508,"total":196,"current":44}
+{"_e":"metro:bundling:progress","_t":1790677829305,"id":"2","progress":0.18367346938775508,"total":200,"current":47}
+{"_e":"metro:bundling:progress","_t":1790677829404,"id":"2","progress":0.18367346938775508,"total":203,"current":53}
+{"_e":"metro:bundling:progress","_t":1790677829510,"id":"2","progress":0.18367346938775508,"total":211,"current":61}
+{"_e":"metro:bundling:progress","_t":1790677829609,"id":"2","progress":0.18367346938775508,"total":223,"current":70}
+{"_e":"metro:bundling:progress","_t":1790677829713,"id":"2","progress":0.18367346938775508,"total":228,"current":80}
+{"_e":"metro:bundling:progress","_t":1790677829820,"id":"2","progress":0.18367346938775508,"total":240,"current":89}
+{"_e":"metro:bundling:progress","_t":1790677829930,"id":"2","progress":0.18367346938775508,"total":250,"current":96}
+{"_e":"metro:bundling:progress","_t":1790677830040,"id":"2","progress":0.18367346938775508,"total":256,"current":109}
+{"_e":"metro:bundling:progress","_t":1790677830140,"id":"2","progress":0.20661157024793386,"total":264,"current":120}
+{"_e":"metro:bundling:progress","_t":1790677830240,"id":"2","progress":0.20661157024793386,"total":302,"current":130}
+{"_e":"metro:bundling:progress","_t":1790677830340,"id":"2","progress":0.20661157024793386,"total":304,"current":136}
+{"_e":"metro:bundling:progress","_t":1790677830446,"id":"2","progress":0.2127887617065557,"total":310,"current":143}
+{"_e":"metro:bundling:progress","_t":1790677830546,"id":"2","progress":0.23125684611951805,"total":314,"current":151}
+{"_e":"metro:bundling:progress","_t":1790677830656,"id":"2","progress":0.24082647462277093,"total":324,"current":159}
+{"_e":"metro:bundling:progress","_t":1790677830759,"id":"2","progress":0.24082647462277093,"total":343,"current":165}
+{"_e":"metro:bundling:progress","_t":1790677830859,"id":"2","progress":0.24082647462277093,"total":350,"current":170}
+{"_e":"metro:bundling:progress","_t":1790677830959,"id":"2","progress":0.25412647776318265,"total":365,"current":184}
+{"_e":"metro:bundling:progress","_t":1790677831060,"id":"2","progress":0.2734359674806199,"total":371,"current":194}
+{"_e":"metro:bundling:progress","_t":1790677831164,"id":"2","progress":0.2734359674806199,"total":392,"current":203}
+{"_e":"metro:bundling:progress","_t":1790677831267,"id":"2","progress":0.2741288967975912,"total":403,"current":211}
+{"_e":"metro:bundling:progress","_t":1790677831368,"id":"2","progress":0.28994082840236685,"total":416,"current":224}
+{"_e":"metro:bundling:progress","_t":1790677831469,"id":"2","progress":0.30519829820529115,"total":429,"current":237}
+{"_e":"metro:bundling:progress","_t":1790677831571,"id":"2","progress":0.30519829820529115,"total":448,"current":242}
+{"_e":"metro:bundling:progress","_t":1790677831675,"id":"2","progress":0.30519829820529115,"total":457,"current":251}
+{"_e":"metro:bundling:progress","_t":1790677831784,"id":"2","progress":0.30519829820529115,"total":460,"current":254}
+{"_e":"metro:bundling:progress","_t":1790677831887,"id":"2","progress":0.3129230439102668,"total":463,"current":259}
+{"_e":"metro:bundling:progress","_t":1790677831992,"id":"2","progress":0.3136961447070309,"total":466,"current":261}
+{"_e":"metro:bundling:progress","_t":1790677832067,"id":"2","progress":0.31610455156661577,"total":466,"current":262}
+{"_e":"metro:bundling:progress","_t":1790677832172,"id":"2","progress":0.31821170282708744,"total":468,"current":264}
+{"_e":"metro:bundling:progress","_t":1790677832278,"id":"2","progress":0.3210312476254754,"total":473,"current":268}
+{"_e":"metro:bundling:progress","_t":1790677832346,"id":"2","progress":0.323431472898015,"total":473,"current":269}
+{"_e":"metro:bundling:progress","_t":1790677832448,"id":"2","progress":0.3463056105945909,"total":486,"current":286}
+{"_e":"metro:bundling:progress","_t":1790677832556,"id":"2","progress":0.38334003923992344,"total":491,"current":304}
+{"_e":"metro:bundling:progress","_t":1790677832668,"id":"2","progress":0.4007706815816857,"total":496,"current":314}
+{"_e":"metro:bundling:progress","_t":1790677832771,"id":"2","progress":0.4007706815816857,"total":507,"current":320}
+{"_e":"metro:bundling:progress","_t":1790677832882,"id":"2","progress":0.4007706815816857,"total":514,"current":324}
+{"_e":"metro:bundling:progress","_t":1790677832986,"id":"2","progress":0.4007706815816857,"total":555,"current":336}
+{"_e":"metro:bundling:progress","_t":1790677833088,"id":"2","progress":0.4007706815816857,"total":586,"current":347}
+{"_e":"metro:bundling:progress","_t":1790677833190,"id":"2","progress":0.4007706815816857,"total":594,"current":355}
+{"_e":"metro:bundling:progress","_t":1790677833297,"id":"2","progress":0.4007706815816857,"total":601,"current":365}
+{"_e":"metro:bundling:progress","_t":1790677833424,"id":"2","progress":0.4007706815816857,"total":607,"current":378}
+{"_e":"metro:bundling:progress","_t":1790677833537,"id":"2","progress":0.4007706815816857,"total":608,"current":384}
+{"_e":"metro:bundling:progress","_t":1790677833638,"id":"2","progress":0.4249584098403531,"total":609,"current":397}
+{"_e":"metro:bundling:progress","_t":1790677833738,"id":"2","progress":0.4495592582639075,"total":610,"current":409}
+{"_e":"metro:bundling:progress","_t":1790677833842,"id":"2","progress":0.47638800501894984,"total":623,"current":430}
+{"_e":"metro:bundling:progress","_t":1790677833948,"id":"2","progress":0.4965385219862468,"total":623,"current":439}
+{"_e":"metro:bundling:progress","_t":1790677834049,"id":"2","progress":0.5011740992693374,"total":630,"current":446}
+{"_e":"metro:bundling:progress","_t":1790677834151,"id":"2","progress":0.5111687023374047,"total":635,"current":454}
+{"_e":"metro:bundling:progress","_t":1790677834252,"id":"2","progress":0.5318266755812217,"total":639,"current":466}
+{"_e":"metro:bundling:progress","_t":1790677834351,"id":"2","progress":0.5318266755812217,"total":652,"current":473}
+{"_e":"metro:bundling:progress","_t":1790677834462,"id":"2","progress":0.5398665229030339,"total":656,"current":482}
+{"_e":"metro:bundling:progress","_t":1790677834563,"id":"2","progress":0.5405920063352413,"total":661,"current":486}
+{"_e":"metro:bundling:progress","_t":1790677834664,"id":"2","progress":0.5529257067718607,"total":663,"current":493}
+{"_e":"metro:bundling:progress","_t":1790677834764,"id":"2","progress":0.5704105005906808,"total":666,"current":503}
+{"_e":"metro:bundling:progress","_t":1790677834879,"id":"2","progress":0.589073407352951,"total":671,"current":515}
+{"_e":"metro:bundling:progress","_t":1790677834984,"id":"2","progress":0.589073407352951,"total":709,"current":535}
+{"_e":"metro:bundling:progress","_t":1790677835088,"id":"2","progress":0.589073407352951,"total":726,"current":551}
+{"_e":"metro:bundling:progress","_t":1790677835188,"id":"2","progress":0.589073407352951,"total":743,"current":567}
+{"_e":"metro:bundling:progress","_t":1790677835295,"id":"2","progress":0.5934552701332083,"total":749,"current":577}
+{"_e":"metro:bundling:progress","_t":1790677835659,"id":"2","progress":0.5955140899927095,"total":749,"current":578}
+{"_e":"metro:bundling:progress","_t":1790677835765,"id":"2","progress":0.5955140899927095,"total":794,"current":588}
+{"_e":"metro:bundling:progress","_t":1790677835869,"id":"2","progress":0.5955140899927095,"total":803,"current":599}
+{"_e":"metro:bundling:progress","_t":1790677835970,"id":"2","progress":0.5955140899927095,"total":809,"current":611}
+{"_e":"metro:bundling:progress","_t":1790677836072,"id":"2","progress":0.5955140899927095,"total":817,"current":620}
+{"_e":"metro:bundling:progress","_t":1790677836175,"id":"2","progress":0.5955140899927095,"total":927,"current":628}
+{"_e":"metro:bundling:progress","_t":1790677836281,"id":"2","progress":0.5955140899927095,"total":931,"current":634}
+{"_e":"metro:bundling:progress","_t":1790677836407,"id":"2","progress":0.5955140899927095,"total":952,"current":639}
+{"_e":"metro:bundling:progress","_t":1790677836549,"id":"2","progress":0.5955140899927095,"total":955,"current":643}
+{"_e":"metro:bundling:progress","_t":1790677837493,"id":"2","progress":0.5955140899927095,"total":955,"current":644}
+{"_e":"metro:bundling:progress","_t":1790677837597,"id":"2","progress":0.5955140899927095,"total":959,"current":657}
+{"_e":"metro:bundling:progress","_t":1790677837697,"id":"2","progress":0.5955140899927095,"total":965,"current":669}
+{"_e":"metro:bundling:progress","_t":1790677837802,"id":"2","progress":0.5955140899927095,"total":974,"current":678}
+{"_e":"metro:bundling:progress","_t":1790677838222,"id":"2","progress":0.5955140899927095,"total":974,"current":679}
+{"_e":"metro:bundling:progress","_t":1790677838391,"id":"2","progress":0.5955140899927095,"total":977,"current":682}
+{"_e":"metro:bundling:progress","_t":1790677838491,"id":"2","progress":0.5955140899927095,"total":981,"current":691}
+{"_e":"metro:bundling:progress","_t":1790677838592,"id":"2","progress":0.5955140899927095,"total":988,"current":701}
+{"_e":"metro:bundling:progress","_t":1790677838703,"id":"2","progress":0.5955140899927095,"total":989,"current":705}
+{"_e":"metro:bundling:progress","_t":1790677838804,"id":"2","progress":0.5955140899927095,"total":990,"current":707}
+{"_e":"metro:bundling:progress","_t":1790677838916,"id":"2","progress":0.5955140899927095,"total":995,"current":713}
+{"_e":"metro:bundling:progress","_t":1790677839079,"id":"2","progress":0.5955140899927095,"total":995,"current":714}
+{"_e":"metro:bundling:progress","_t":1790677839184,"id":"2","progress":0.5955140899927095,"total":998,"current":717}
+{"_e":"metro:bundling:progress","_t":1790677839298,"id":"2","progress":0.5955140899927095,"total":998,"current":719}
+{"_e":"metro:bundling:progress","_t":1790677839406,"id":"2","progress":0.5955140899927095,"total":1000,"current":722}
+{"_e":"metro:bundling:progress","_t":1790677839507,"id":"2","progress":0.5955140899927095,"total":1025,"current":737}
+{"_e":"metro:bundling:progress","_t":1790677839607,"id":"2","progress":0.5955140899927095,"total":1039,"current":743}
+{"_e":"metro:bundling:progress","_t":1790677839710,"id":"2","progress":0.5955140899927095,"total":1043,"current":749}
+{"_e":"metro:bundling:progress","_t":1790677839815,"id":"2","progress":0.5955140899927095,"total":1061,"current":755}
+{"_e":"metro:bundling:progress","_t":1790677839916,"id":"2","progress":0.5955140899927095,"total":1066,"current":758}
+{"_e":"metro:bundling:progress","_t":1790677840025,"id":"2","progress":0.5955140899927095,"total":1079,"current":759}
+{"_e":"metro:bundling:progress","_t":1790677840150,"id":"2","progress":0.5955140899927095,"total":1079,"current":761}
+{"_e":"metro:bundling:progress","_t":1790677840250,"id":"2","progress":0.5955140899927095,"total":1080,"current":764}
+{"_e":"metro:bundling:progress","_t":1790677840350,"id":"2","progress":0.5955140899927095,"total":1080,"current":766}
+{"_e":"metro:bundling:progress","_t":1790677840450,"id":"2","progress":0.5955140899927095,"total":1084,"current":769}
+{"_e":"metro:bundling:progress","_t":1790677840558,"id":"2","progress":0.5955140899927095,"total":1085,"current":776}
+{"_e":"metro:bundling:progress","_t":1790677840669,"id":"2","progress":0.5955140899927095,"total":1086,"current":786}
+{"_e":"metro:bundling:progress","_t":1790677840771,"id":"2","progress":0.5955140899927095,"total":1110,"current":792}
+{"_e":"metro:bundling:progress","_t":1790677840877,"id":"2","progress":0.5955140899927095,"total":1114,"current":797}
+{"_e":"metro:bundling:progress","_t":1790677840976,"id":"2","progress":0.5955140899927095,"total":1118,"current":804}
+{"_e":"metro:bundling:progress","_t":1790677841092,"id":"2","progress":0.5955140899927095,"total":1125,"current":809}
+{"_e":"metro:bundling:progress","_t":1790677841198,"id":"2","progress":0.5955140899927095,"total":1125,"current":813}
+{"_e":"metro:bundling:progress","_t":1790677841300,"id":"2","progress":0.5955140899927095,"total":1126,"current":813}
+{"_e":"metro:bundling:progress","_t":1790677841649,"id":"2","progress":0.5955140899927095,"total":1126,"current":814}
+{"_e":"metro:bundling:progress","_t":1790677841756,"id":"2","progress":0.5955140899927095,"total":1143,"current":828}
+{"_e":"metro:bundling:progress","_t":1790677841858,"id":"2","progress":0.5955140899927095,"total":1162,"current":836}
+{"_e":"metro:bundling:progress","_t":1790677841963,"id":"2","progress":0.5955140899927095,"total":1178,"current":847}
+{"_e":"metro:bundling:progress","_t":1790677842065,"id":"2","progress":0.5955140899927095,"total":1193,"current":859}
+{"_e":"metro:bundling:progress","_t":1790677842171,"id":"2","progress":0.5955140899927095,"total":1207,"current":864}
+{"_e":"metro:bundling:progress","_t":1790677842211,"id":"2","progress":0.5955140899927095,"total":1207,"current":865}
+{"_e":"metro:bundling:progress","_t":1790677842318,"id":"2","progress":0.5955140899927095,"total":1207,"current":892}
+{"_e":"metro:bundling:progress","_t":1790677842424,"id":"2","progress":0.5955140899927095,"total":1207,"current":919}
+{"_e":"metro:bundling:progress","_t":1790677842523,"id":"2","progress":0.5955140899927095,"total":1238,"current":939}
+{"_e":"metro:bundling:progress","_t":1790677842636,"id":"2","progress":0.5955140899927095,"total":1252,"current":952}
+{"_e":"metro:bundling:progress","_t":1790677842738,"id":"2","progress":0.5955140899927095,"total":1258,"current":964}
+{"_e":"metro:bundling:progress","_t":1790677842851,"id":"2","progress":0.5955140899927095,"total":1265,"current":976}
+{"_e":"metro:bundling:progress","_t":1790677842954,"id":"2","progress":0.6084735293228323,"total":1273,"current":993}
+{"_e":"metro:bundling:progress","_t":1790677843055,"id":"2","progress":0.6129564617092993,"total":1276,"current":999}
+{"_e":"metro:bundling:progress","_t":1790677843160,"id":"2","progress":0.6248290634603241,"total":1279,"current":1011}
+{"_e":"metro:bundling:progress","_t":1790677843262,"id":"2","progress":0.6442504034014715,"total":1282,"current":1029}
+{"_e":"metro:bundling:progress","_t":1790677843362,"id":"2","progress":0.6575506063679996,"total":1285,"current":1042}
+{"_e":"metro:bundling:progress","_t":1790677843469,"id":"2","progress":0.6717370219785269,"total":1286,"current":1054}
+{"_e":"metro:bundling:progress","_t":1790677843569,"id":"2","progress":0.6748355864302965,"total":1294,"current":1063}
+{"_e":"metro:bundling:progress","_t":1790677843669,"id":"2","progress":0.6929437545653763,"total":1295,"current":1078}
+{"_e":"metro:bundling:progress","_t":1790677843769,"id":"2","progress":0.7060129636315157,"total":1302,"current":1094}
+{"_e":"metro:bundling:progress","_t":1790677843877,"id":"2","progress":0.7230872259482661,"total":1303,"current":1108}
+{"_e":"metro:bundling:progress","_t":1790677843977,"id":"2","progress":0.729655031758056,"total":1310,"current":1119}
+{"_e":"metro:bundling:progress","_t":1790677844081,"id":"2","progress":0.7410394830053926,"total":1315,"current":1132}
+{"_e":"metro:bundling:progress","_t":1790677844182,"id":"2","progress":0.7548829982968925,"total":1319,"current":1146}
+{"_e":"metro:bundling:progress","_t":1790677844284,"id":"2","progress":0.7694441937714434,"total":1319,"current":1157}
+{"_e":"metro:bundling:progress","_t":1790677844385,"id":"2","progress":0.792369719926538,"total":1320,"current":1175}
+{"_e":"metro:bundling:progress","_t":1790677844485,"id":"2","progress":0.8021811225640054,"total":1332,"current":1193}
+{"_e":"metro:bundling:progress","_t":1790677844602,"id":"2","progress":0.8097309640473589,"total":1338,"current":1204}
+{"_e":"metro:bundling:progress","_t":1790677844703,"id":"2","progress":0.8402777777777777,"total":1344,"current":1232}
+{"_e":"metro:bundling:progress","_t":1790677844804,"id":"2","progress":0.8614589849108368,"total":1350,"current":1253}
+{"_e":"metro:bundling:progress","_t":1790677844905,"id":"2","progress":0.8769152779211726,"total":1353,"current":1267}
+{"_e":"metro:bundling:progress","_t":1790677845009,"id":"2","progress":0.8908906047838997,"total":1354,"current":1278}
+{"_e":"metro:bundling:progress","_t":1790677845110,"id":"2","progress":0.8945891542994583,"total":1366,"current":1292}
+{"_e":"metro:bundling:progress","_t":1790677845210,"id":"2","progress":0.9198043842549843,"total":1368,"current":1312}
+{"_e":"metro:bundling:progress","_t":1790677845310,"id":"2","progress":0.9207123525677436,"total":1384,"current":1328}
+{"_e":"metro:bundling:progress","_t":1790677845420,"id":"2","progress":0.9207123525677436,"total":1412,"current":1337}
+{"_e":"metro:bundling:progress","_t":1790677845521,"id":"2","progress":0.9207123525677436,"total":1417,"current":1350}
+{"_e":"metro:bundling:progress","_t":1790677845625,"id":"2","progress":0.9207123525677436,"total":1425,"current":1364}
+{"_e":"metro:bundling:progress","_t":1790677845728,"id":"2","progress":0.9284968889516592,"total":1428,"current":1376}
+{"_e":"metro:bundling:progress","_t":1790677845837,"id":"2","progress":0.931197969383832,"total":1428,"current":1378}
+{"_e":"metro:bundling:progress","_t":1790677845940,"id":"2","progress":0.9409270573772245,"total":1434,"current":1391}
+{"_e":"metro:bundling:progress","_t":1790677846042,"id":"2","progress":0.9480254282749084,"total":1443,"current":1405}
+{"_e":"metro:bundling:progress","_t":1790677846150,"id":"2","progress":0.953684832485593,"total":1451,"current":1417}
+{"_e":"metro:bundling:progress","_t":1790677846251,"id":"2","progress":0.9660696709004034,"total":1461,"current":1436}
+{"_e":"metro:bundling:progress","_t":1790677846354,"id":"2","progress":0.9702518394226699,"total":1468,"current":1446}
+{"_e":"metro:bundling:progress","_t":1790677846460,"id":"2","progress":0.9702518394226699,"total":1509,"current":1459}
+{"_e":"metro:bundling:progress","_t":1790677846563,"id":"2","progress":0.9702518394226699,"total":1569,"current":1465}
+{"_e":"metro:bundling:progress","_t":1790677846664,"id":"2","progress":0.9702518394226699,"total":1569,"current":1466}
+{"_e":"metro:bundling:progress","_t":1790677846717,"id":"2","progress":0.9702518394226699,"total":1569,"current":1467}
+{"_e":"metro:bundling:progress","_t":1790677846823,"id":"2","progress":0.9702518394226699,"total":1572,"current":1472}
+{"_e":"metro:bundling:progress","_t":1790677846927,"id":"2","progress":0.9702518394226699,"total":1575,"current":1487}
+{"_e":"metro:bundling:progress","_t":1790677847036,"id":"2","progress":0.9702518394226699,"total":1583,"current":1507}
+{"_e":"metro:bundling:progress","_t":1790677847137,"id":"2","progress":0.9702518394226699,"total":1590,"current":1529}
+{"_e":"metro:bundling:progress","_t":1790677847242,"id":"2","progress":0.9702518394226699,"total":1594,"current":1550}
+{"_e":"metro:bundling:progress","_t":1790677847347,"id":"2","progress":0.9702518394226699,"total":1601,"current":1568}
+{"_e":"metro:bundling:progress","_t":1790677847448,"id":"2","progress":0.9702518394226699,"total":1613,"current":1586}
+{"_e":"metro:bundling:progress","_t":1790677847560,"id":"2","progress":0.9779418547838773,"total":1623,"current":1605}
+{"_e":"metro:bundling:progress","_t":1790677847662,"id":"2","progress":0.9853033229585714,"total":1627,"current":1615}
+{"_e":"metro:bundling:progress","_t":1790677847763,"id":"2","progress":0.9853033229585714,"total":1645,"current":1622}
+{"_e":"metro:bundling:progress","_t":1790677847879,"id":"2","progress":0.9853033229585714,"total":1646,"current":1627}
+{"_e":"metro:bundling:progress","_t":1790677848107,"id":"2","progress":0.9853033229585714,"total":1646,"current":1628}
+{"_e":"metro:bundling:progress","_t":1790677848206,"id":"2","progress":0.9853033229585714,"total":1662,"current":1634}
+{"_e":"metro:bundling:progress","_t":1790677848328,"id":"2","progress":0.9853033229585714,"total":1662,"current":1636}
+{"_e":"metro:bundling:progress","_t":1790677848455,"id":"2","progress":0.9853033229585714,"total":1667,"current":1650}
+{"_e":"metro:bundling:progress","_t":1790677848556,"id":"2","progress":0.9916243264381301,"total":1668,"current":1661}
+{"_e":"metro:bundling:progress","_t":1790677848674,"id":"2","progress":0.999,"total":1673,"current":1673}
+{"_e":"metro:bundling:done","_t":1790677849165,"id":"2","total":1673,"ms":28804.1461}
+{"_e":"metro:client_log","_t":1790677876591,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790677876815,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790677876815,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790677876815,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:failed","_t":1790678050325,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected keyword 'import'. (12:24)\n\n  10 |     {\n  11 |       nome: '...',\n> 12 |       responsavel: '..',import { useState } from 'react';\n     |                         ^\n  13 | import {View, Text, StyleSheet, ScrollView, TouchableOpacity,TextInput,} from 'react-native';\n  14 | import { MaterialIcons } from '@expo/vector-icons';\n  15 | import { router } from 'expo-router';","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790678064547,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected keyword 'import'. (12:24)\n\n  10 |     {\n  11 |       nome: '...',\n> 12 |       responsavel: '..',import { useState } from 'react';\n     |                         ^\n  13 | import {View, Text, StyleSheet, ScrollView, TouchableOpacity,TextInput,} from 'react-native';\n  14 | import { MaterialIcons } from '@expo/vector-icons';\n  15 | import { router } from 'expo-router';","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790678072623,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected keyword 'import'. (12:24)\n\n  10 |     {\n  11 |       nome: '...',\n> 12 |       responsavel: '..',import { useState } from 'react';\n     |                         ^\n  13 | import {View, Text, StyleSheet, ScrollView, TouchableOpacity,TextInput,} from 'react-native';\n  14 | import { MaterialIcons } from '@expo/vector-icons';\n  15 | import { router } from 'expo-router';","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790678077478,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected keyword 'import'. (12:24)\n\n  10 |     {\n  11 |       nome: '...',\n> 12 |       responsavel: '..',import { useState } from 'react';\n     |                         ^\n  13 | import {View, Text, StyleSheet, ScrollView, TouchableOpacity,TextInput,} from 'react-native';\n  14 | import { MaterialIcons } from '@expo/vector-icons';\n  15 | import { router } from 'expo-router';","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1790679349229,"id":"e","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790679349230,"id":"e","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790679349232,"id":"e","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790679349427,"id":"e","total":1,"ms":197.758}
+{"_e":"metro:client_log","_t":1790679379121,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790679379179,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:failed","_t":1790679948125,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected token (329:0)\n\n  327 |   },\n  328 |\n> 329 | });\n      | ^","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790680184446,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected token (283:23)\n\n  281 |     flexDirection: 'row',\n  282 |     gap: 22,\n> 283 |     paddingHorizontal: ,\n      |                        ^\n  284 |   },\n  285 |\n  286 |   botaoTipo: {","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:client_log","_t":1790680313934,"level":"error","data":["[ReferenceError: Property 'padding' doesn't exist]","\n\n\u001b[1mCode: editar.js\u001b[22m\n\u001b[0m \u001b[90m 281 |\u001b[39m     flexDirection\u001b[33m:\u001b[39m \u001b[32m'row'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 282 |\u001b[39m     gap\u001b[33m:\u001b[39m \u001b[35m22\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 283 |\u001b[39m     padding\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 284 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 285 |\u001b[39m\n \u001b[90m 286 |\u001b[39m   botaoTipo\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  <global> (app\\editar.js:283:5)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1790680315019,"level":"error","data":["[ReferenceError: Property 'paddingH' doesn't exist]","\n\n\u001b[1mCode: editar.js\u001b[22m\n\u001b[0m \u001b[90m 281 |\u001b[39m     flexDirection\u001b[33m:\u001b[39m \u001b[32m'row'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 282 |\u001b[39m     gap\u001b[33m:\u001b[39m \u001b[35m22\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 283 |\u001b[39m     paddingH\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 284 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 285 |\u001b[39m\n \u001b[90m 286 |\u001b[39m   botaoTipo\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  <global> (app\\editar.js:283:5)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1790680318256,"level":"error","data":["[ReferenceError: Property 'paddingHorizontal' doesn't exist]","\n\n\u001b[1mCode: editar.js\u001b[22m\n\u001b[0m \u001b[90m 281 |\u001b[39m     flexDirection\u001b[33m:\u001b[39m \u001b[32m'row'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 282 |\u001b[39m     gap\u001b[33m:\u001b[39m \u001b[35m22\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 283 |\u001b[39m     paddingHorizontal\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 284 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 285 |\u001b[39m\n \u001b[90m 286 |\u001b[39m   botaoTipo\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  <global> (app\\editar.js:283:5)\u001b[39m"]}
+{"_e":"metro:bundling:failed","_t":1790680507348,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected digit after hash token. (290:40)\n\n  288 |     borderColor: '#51608C',\n  289 |     padding: 5,\n> 290 |     backgroundColor: '    borderColor: '#51608C',\n      |                                         ^\n  291 | ',\n  292 |     borderWidth: 2,\n  293 |   },","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790680514981,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unterminated string constant. (291:0)\n\n  289 |     padding: 5,\n  290 |     backgroundColor: '#51608C',\n> 291 | ',\n      | ^\n  292 |     borderWidth: 2,\n  293 |   },\n  294 |","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1790681222290,"id":"n","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790681222291,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790681222292,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790681222390,"id":"n","total":1,"ms":99.7839}
+{"_e":"metro:client_log","_t":1790681263326,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790681263454,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:failed","_t":1790681822830,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\cadastro.js: Expected corresponding JSX closing tag for <View>. (204:16)\n\n  202 |                     </TouchableOpacity>\n  203 |\n> 204 |                 </Card>\n      |                 ^\n  205 |             </View>\n  206 |             </View>\n  207 |         );","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790681836363,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\cadastro.js: Expected corresponding JSX closing tag for <View>. (204:16)\n\n  202 |                     </TouchableOpacity>\n  203 |\n> 204 |                 </Card>\n      |                 ^\n  205 |             </View>\n  206 |             </View>\n  207 |         );","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790681838566,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\cadastro.js: Expected corresponding JSX closing tag for <View>. (204:16)\n\n  202 |                     </TouchableOpacity>\n  203 |\n> 204 |                 </Card>\n      |                 ^\n  205 |             </View>\n  206 |             </View>\n  207 |         );","importStack":null,"filename":"app\\cadastro.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790682084237,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\contas.js: Unexpected keyword 'import'. (235:0)\n\n  233 |     zIndex: 10,\n  234 |   },\n> 235 | import { useState } from 'react';\n      | ^\n  236 | import {\n  237 |   View,\n  238 |   Text,","importStack":null,"filename":"app\\contas.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790682123358,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Identifier 'useFonts' has already been declared. (3:9)\n\n  1 | import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Modal} from 'react-native';\n  2 | import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';\n> 3 | import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';\n    |          ^\n  4 | import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';\n  5 |\n  6 | import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790682124946,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Identifier 'useFonts' has already been declared. (3:9)\n\n  1 | import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Modal} from 'react-native';\n  2 | import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';\n> 3 | import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';\n    |          ^\n  4 | import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';\n  5 | import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';\n  6 | import { MaterialIcons } from '@expo/vector-icons';","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:client_log","_t":1790682152124,"level":"error","data":["[ReferenceError: Property 'TextInput' doesn't exist]","\n\n\u001b[1mCode: editar.js\u001b[22m\n\u001b[0m \u001b[90m 122 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mText\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 123 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 124 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33mTextInput\u001b[39m\n \u001b[90m     |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 125 |\u001b[39m           style\u001b[33m=\u001b[39m{styles\u001b[33m.\u001b[39mcampo}\n \u001b[90m 126 |\u001b[39m           placeholder\u001b[33m=\u001b[39m\u001b[32m\"Digite o nome.\"\u001b[39m\n \u001b[90m 127 |\u001b[39m           placeholderTextColor\u001b[33m=\u001b[39m\u001b[32m\"#8A8A8A\"\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  Editar (app\\editar.js:124:10)\u001b[39m","\n\n\u001b[1mCode: _layout.js\u001b[22m\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[36mfunction\u001b[39m \u001b[33mLayout\u001b[39m() {\n \u001b[90m 4 |\u001b[39m   \u001b[36mreturn\u001b[39m (\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     \u001b[33m<\u001b[39m\u001b[33mStack\u001b[39m\n \u001b[90m   |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m       screenOptions\u001b[33m=\u001b[39m{{\n \u001b[90m 7 |\u001b[39m         headerShown\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       }}\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  Layout (app\\_layout.js:5:5)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1790682241282,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790682241355,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790682270333,"level":"error","data":["[ReferenceError: Property 'TextInput' doesn't exist]","\n\n\u001b[1mCode: editar.js\u001b[22m\n\u001b[0m \u001b[90m 122 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mText\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 123 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 124 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33mTextInput\u001b[39m\n \u001b[90m     |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 125 |\u001b[39m           style\u001b[33m=\u001b[39m{styles\u001b[33m.\u001b[39mcampo}\n \u001b[90m 126 |\u001b[39m           placeholder\u001b[33m=\u001b[39m\u001b[32m\"Digite o nome.\"\u001b[39m\n \u001b[90m 127 |\u001b[39m           placeholderTextColor\u001b[33m=\u001b[39m\u001b[32m\"#8A8A8A\"\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  Editar (app\\editar.js:124:10)\u001b[39m","\n\n\u001b[1mCode: _layout.js\u001b[22m\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[36mfunction\u001b[39m \u001b[33mLayout\u001b[39m() {\n \u001b[90m 4 |\u001b[39m   \u001b[36mreturn\u001b[39m (\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     \u001b[33m<\u001b[39m\u001b[33mStack\u001b[39m\n \u001b[90m   |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m       screenOptions\u001b[33m=\u001b[39m{{\n \u001b[90m 7 |\u001b[39m         headerShown\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       }}\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  Layout (app\\_layout.js:5:5)\u001b[39m"]}
+{"_e":"metro:bundling:failed","_t":1790682319899,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected token, expected \",\" (53:6)\n\n  51 |       </View>\n  52 |\n> 53 |       {/* SIDEBAR */}\n     |       ^\n  54 |       {menuAberto && (\n  55 |         <View style={styles.sidebar}>\n  56 |","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:client_log","_t":1790682349292,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790682349423,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:started","_t":1790682361163,"id":"x","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790682361163,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682361244,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682361344,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682361444,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682361544,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682361644,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682361744,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682361844,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682361953,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790682362030,"id":"x","total":1,"ms":867.7565}
+{"_e":"metro:client_log","_t":1790682393719,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790682393793,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:started","_t":1790682441278,"id":"y","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790682441278,"id":"y","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790682441280,"id":"y","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790682441368,"id":"y","total":1,"ms":89.1507}
+{"_e":"metro:client_log","_t":1790682463878,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790682463961,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:failed","_t":1790682966463,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\editar.js: Unexpected token, expected \"}\" (297:12)\n\n  295 |           <Text style={styles.produtosTitulo}>\n  296 |             {tipo === 'entrada'\n> 297 |             'ENTRADA DE PRODUTO'\n      |             ^\n  298 |               : 'SAÍDA DE PRODUTO'}\n  299 |           </Text>\n  300 |","importStack":null,"filename":"app\\editar.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1790683258547,"id":"10","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790683258547,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790683258604,"id":"10","total":1,"ms":57.3295}
+{"_e":"metro:client_log","_t":1790683285556,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790683285644,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790683309356,"level":"log","data":["ERRO:","[SyntaxError: JSON Parse error: Unexpected character: <]"]}
+{"_e":"metro:bundling:started","_t":1790683475758,"id":"11","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790683475758,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790683475826,"id":"11","total":1,"ms":67.5987}
+{"_e":"metro:bundling:started","_t":1790683563191,"id":"12","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790683563191,"id":"12","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790683563253,"id":"12","total":1,"ms":61.4471}
+{"_e":"metro:client_log","_t":1790683589131,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790683589188,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790683604809,"level":"log","data":["ERRO:","[SyntaxError: JSON Parse error: Unexpected character: <]"]}
+{"_e":"metro:client_log","_t":1790683614460,"level":"log","data":["ERRO:","[SyntaxError: JSON Parse error: Unexpected character: <]"]}
+{"_e":"metro:client_log","_t":1790683620418,"level":"log","data":["ERRO:","[SyntaxError: JSON Parse error: Unexpected character: <]"]}
