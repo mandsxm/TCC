@@ -3989,3 +3989,84 @@
 {"_e":"metro:client_log","_t":1790766035840,"level":"log","data":["RESPOSTA:","{\"mensagem\": \"Operação realizada com sucesso\", \"nova_quantidade\": 8, \"success\": true}"]}
 {"_e":"metro:client_log","_t":1790766126981,"level":"log","data":["STATUS:","200"]}
 {"_e":"metro:client_log","_t":1790766127024,"level":"log","data":["RESPOSTA:","{\"mensagem\": \"Operação realizada com sucesso\", \"nova_quantidade\": 16, \"success\": true}"]}
+{"_e":"metro:bundling:started","_t":1790767295594,"id":"n","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790767295598,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767296607,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767296711,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767296812,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767296911,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767297011,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767297111,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767297211,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767297311,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767297421,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790767297522,"id":"n","total":1,"ms":1925.5832}
+{"_e":"metro:client_log","_t":1790767320828,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790767320876,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790767358937,"level":"log","data":["STATUS:","500"]}
+{"_e":"metro:client_log","_t":1790767358983,"level":"log","data":["RESPOSTA:","{\"erro\": \"unsupported operand type(s) for +: 'float' and 'str'\", \"success\": false}"]}
+{"_e":"metro:client_log","_t":1790767369678,"level":"log","data":["STATUS:","500"]}
+{"_e":"metro:client_log","_t":1790767369724,"level":"log","data":["RESPOSTA:","{\"erro\": \"unsupported operand type(s) for +: 'float' and 'str'\", \"success\": false}"]}
+{"_e":"metro:bundling:started","_t":1790767455386,"id":"r","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790767455387,"id":"r","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790767455453,"id":"r","total":1,"ms":66.7943}
+{"_e":"metro:bundling:started","_t":1790767472850,"id":"t","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790767472850,"id":"t","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790767472908,"id":"t","total":1,"ms":57.0856}
+{"_e":"metro:client_log","_t":1790767496414,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790767496461,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790767524799,"level":"log","data":["STATUS:","500"]}
+{"_e":"metro:client_log","_t":1790767524847,"level":"log","data":["RESPOSTA:","{\"erro\": \"unsupported operand type(s) for +: 'float' and 'str'\", \"success\": false}"]}
+{"_e":"metro:client_log","_t":1790767535685,"level":"log","data":["STATUS:","500"]}
+{"_e":"metro:client_log","_t":1790767535745,"level":"log","data":["RESPOSTA:","{\"erro\": \"unsupported operand type(s) for +: 'float' and 'str'\", \"success\": false}"]}
+{"_e":"metro:client_log","_t":1790767539426,"level":"log","data":["STATUS:","500"]}
+{"_e":"metro:client_log","_t":1790767539543,"level":"log","data":["RESPOSTA:","{\"erro\": \"unsupported operand type(s) for +: 'float' and 'str'\", \"success\": false}"]}
+{"_e":"metro:bundling:started","_t":1790767698314,"id":"u","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790767698314,"id":"u","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767698316,"id":"u","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790767698706,"id":"u","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790767698791,"id":"u","total":1,"ms":476.7482}
+{"_e":"metro:client_log","_t":1790767724770,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790767724899,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790767752557,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790767752604,"level":"log","data":["RESPOSTA:","{\"mensagem\": \"Operação realizada com sucesso\", \"nova_quantidade\": 8, \"novo_preco\": 800, \"success\": true}"]}
+{"_e":"metro:bundling:failed","_t":1790767874758,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Unexpected keyword 'import'. (7:0)\n\n   5 | import { useState, useCallback} from 'react';\n   6 | import \n>  7 | import { router } from 'expo-router';\n     | ^\n   8 |\n   9 | export default function Tabela() {\n  10 |","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790767874968,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Unexpected keyword 'import'. (7:0)\n\n   5 | import { useState, useCallback} from 'react';\n   6 | import \n>  7 | import { router } from 'expo-router';\n     | ^\n   8 |\n   9 | export default function Tabela() {\n  10 |","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790767876293,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Unexpected token, expected \"from\" (7:0)\n\n   5 | import { useState, useCallback} from 'react';\n   6 | import {use}\n>  7 | import { router } from 'expo-router';\n     | ^\n   8 |\n   9 | export default function Tabela() {\n  10 |","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790767877880,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Unexpected token, expected \"from\" (7:0)\n\n   5 | import { useState, useCallback} from 'react';\n   6 | import {use}\n>  7 | import { router } from 'expo-router';\n     | ^\n   8 |\n   9 | export default function Tabela() {\n  10 |","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790767880129,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Unexpected token, expected \"from\" (7:0)\n\n   5 | import { useState, useCallback} from 'react';\n   6 | import {useFocusEffe}\n>  7 | import { router } from 'expo-router';\n     | ^\n   8 |\n   9 | export default function Tabela() {\n  10 |","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790767881756,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Unexpected token, expected \"from\" (7:0)\n\n   5 | import { useState, useCallback} from 'react';\n   6 | import {useFocusEffect}\n>  7 | import { router } from 'expo-router';\n     | ^\n   8 |\n   9 | export default function Tabela() {\n  10 |","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:failed","_t":1790767903560,"id":null,"message":"SyntaxError: C:\\Users\\Aluno\\TCCdasala\\app expo\\App-Almox\\app\\tabela.js: Identifier 'useFocusEffect' has already been declared. (7:17)\n\n   5 | import { useState, useCallback} from 'react';\n   6 | import {useFocusEffect} from 'expo-router';\n>  7 | import { router, useFocusEffect } from 'expo-router';\n     |                  ^\n   8 |\n   9 | export default function Tabela() {\n  10 |","importStack":null,"filename":"app\\tabela.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:client_log","_t":1790767917574,"level":"error","data":["[ReferenceError: Property 'produtos' doesn't exist]","\n\n\u001b[1mCode: tabela.js\u001b[22m\n\u001b[0m \u001b[90m 135 |\u001b[39m         {\u001b[90m/* PRODUTOS */\u001b[39m}\n \u001b[90m 136 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33mFlatList\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m           data\u001b[33m=\u001b[39m{produtos}\n \u001b[90m     |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m           keyExtractor\u001b[33m=\u001b[39m{(item) \u001b[33m=>\u001b[39m item\u001b[33m.\u001b[39mid\u001b[33m.\u001b[39mtoString()}\n \u001b[90m 139 |\u001b[39m           renderItem\u001b[33m=\u001b[39m{({ item }) \u001b[33m=>\u001b[39m (\n \u001b[90m 140 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  Tabela (app\\tabela.js:137:17)\u001b[39m","\n\n\u001b[1mCode: _layout.js\u001b[22m\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[36mfunction\u001b[39m \u001b[33mLayout\u001b[39m() {\n \u001b[90m 4 |\u001b[39m   \u001b[36mreturn\u001b[39m (\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     \u001b[33m<\u001b[39m\u001b[33mStack\u001b[39m\n \u001b[90m   |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m       screenOptions\u001b[33m=\u001b[39m{{\n \u001b[90m 7 |\u001b[39m         headerShown\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       }}\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  Layout (app\\_layout.js:5:5)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1790767972464,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790767972507,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:started","_t":1790768240450,"id":"10","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790768240450,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768240957,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768241057,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768241164,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768241265,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768241365,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768241465,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768241565,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768241667,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790768241749,"id":"10","total":1,"ms":1299.4859}
+{"_e":"metro:client_log","_t":1790768263330,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790768263565,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790768403492,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790768403604,"level":"log","data":["RESPOSTA:","{\"mensagem\": \"Operação realizada com sucesso\", \"nova_quantidade\": 2, \"novo_preco\": 2, \"success\": true}"]}
+{"_e":"metro:bundling:started","_t":1790768554390,"id":"11","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790768554390,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768554392,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768554516,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768554845,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768554946,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768555049,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768555150,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768555250,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768555350,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768555450,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790768555560,"id":"11","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790768555707,"id":"11","total":1,"ms":1317.2944}
+{"_e":"metro:client_log","_t":1790768579112,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790768579232,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
