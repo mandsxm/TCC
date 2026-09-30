@@ -22,13 +22,14 @@ def verificar_senha(senha_digitada, hash_armazenado):
     hash_bytes = hash_armazenado.encode('utf-8')
     return bcrypt.checkpw(senha_bytes, hash_bytes)
 
-# CONEXÃO
+#CONEXÃO
 def get_db():
     return mysql.connector.connect(
         host="almoxarifado-mysql", # Mudei pra rodar no Docker, mas era 127.0.0.1
         user='root',
         password='',
         database='almoxarifado',
+        charset='utf8mb4',
     )
 
 # AUTORIZAÇÃO

@@ -14,7 +14,7 @@ export default function Editar() {
   const [nome, setNome] = useState('');
   const [responsavel, setResponsavel] = useState('');
   const [descricao, setDescricao] = useState('');
-  const [categoria, setCategoria] = useState('');
+  const [categoria, setCategoria] = useState(''); 
   const [preco, setPreco] = useState('');
   const [quantidade, setQuantidade] = useState('');
   const [estoqueMin, setEstoqueMin] = useState('');
@@ -45,12 +45,22 @@ export default function Editar() {
       return;
     }
 
+     const precoNumero = preco ? parseFloat(preco.replace(',', '.')) : 0;
+
+    if (isNaN(precoNumero) || precoNumero < 0) {
+      Alert.alert(
+        'Atenção',
+         'Digite um preço válido.'
+        );
+      return;
+    }
+
     setCarregando(true);
 
     try {
 
       const resposta = await fetch(
-        'http://10.154.20.23:5000/entrada_app ',
+        'http://10.154.20.23:5000/entrada_app',
         {
           method: 'POST',
 
@@ -64,7 +74,7 @@ export default function Editar() {
             qtde: quantidade,
             responsavel: responsavel,
             estoque_min: estoqueMin || '0',
-            preco: preco || '0',
+            preco: String(precoNumero),
             descricao: descricao,
             tipo: tipo,
           }).toString(),
@@ -102,7 +112,9 @@ export default function Editar() {
 
       // Vai para a tabela
       router.replace('/tabela');
+
     } catch (erro) {
+
       console.log('ERRO:', erro);
 
       Alert.alert(
@@ -115,11 +127,14 @@ export default function Editar() {
     }
   };
 
+
   return (
     <View style={styles.container}>
 
       {/* NAVBAR */}
+
       <View style={styles.navbar}>
+
         <TouchableOpacity
           style={styles.menuButton}
           onPress={() => setMenuAberto(!menuAberto)}
@@ -131,6 +146,7 @@ export default function Editar() {
           />
         </TouchableOpacity>
 
+
         <TouchableOpacity
           onPress={() => router.push('/tabela')}
         >
@@ -138,6 +154,7 @@ export default function Editar() {
             ESTOQUE
           </Text>
         </TouchableOpacity>
+
 
         <TouchableOpacity
           onPress={() => router.push('/editar')}
@@ -147,6 +164,7 @@ export default function Editar() {
           </Text>
         </TouchableOpacity>
 
+
         <TouchableOpacity
           onPress={() => router.push('/contas')}
         >
@@ -155,6 +173,7 @@ export default function Editar() {
           </Text>
         </TouchableOpacity>
 
+
         <TouchableOpacity
           onPress={() => router.push('/cadastro')}
         >
@@ -162,10 +181,13 @@ export default function Editar() {
             CADASTRO
           </Text>
         </TouchableOpacity>
+
       </View>
 
       {/* SIDEBAR */}
+
       {menuAberto && (
+
         <View style={styles.sidebar}>
 
           <TouchableOpacity
@@ -179,17 +201,21 @@ export default function Editar() {
             />
           </TouchableOpacity>
 
+
           <Text style={styles.sidebarTitulo}>
             USUÁRIO
           </Text>
 
+
           <Text style={styles.usuario}>
-            Roger
+            Róger
           </Text>
+
 
           <Text style={styles.tipoUsuario}>
             Usuário
           </Text>
+
 
           <TouchableOpacity
             style={styles.logout}
@@ -207,23 +233,28 @@ export default function Editar() {
             </Text>
 
           </TouchableOpacity>
+
         </View>
 
       )}
 
       {/* CONTEÚDO */}
+
       <ScrollView
         contentContainerStyle={styles.conteudo}
         showsVerticalScrollIndicator={false}
       >
 
         {/* TÍTULO */}
+
         <Text style={styles.titulo}>
           {'Boas-vindas ao\nEditar almoxarifado!'}
         </Text>
 
         {/* ENTRADA / SAÍDA */}
+
         <View style={styles.botoesTipo}>
+
           <TouchableOpacity
             style={[
               styles.botaoTipo,
@@ -235,7 +266,9 @@ export default function Editar() {
             <Text style={styles.textoBotao}>
               ENTRADA
             </Text>
+
           </TouchableOpacity>
+
 
           <TouchableOpacity
             style={[
@@ -248,10 +281,13 @@ export default function Editar() {
             <Text style={styles.textoBotao}>
               SAÍDA
             </Text>
+
           </TouchableOpacity>
+
         </View>
 
         {/* CARD */}
+
         <View style={styles.card}>
 
           <Text style={styles.produtosTitulo}>
@@ -260,7 +296,9 @@ export default function Editar() {
               : 'SAÍDA DE PRODUTO'}
           </Text>
 
+
           {/* NOME */}
+
           <Text style={styles.label}>
             NOME
           </Text>
@@ -275,6 +313,7 @@ export default function Editar() {
 
 
           {/* RESPONSÁVEL */}
+
           <Text style={styles.label}>
             RESPONSÁVEL
           </Text>
@@ -288,6 +327,7 @@ export default function Editar() {
           />
 
           {/* CATEGORIA */}
+
           <Text style={styles.label}>
             CATEGORIA
           </Text>
@@ -300,21 +340,26 @@ export default function Editar() {
             onChangeText={setCategoria}
           />
 
-          {/* PREÇO */}
-          <Text style={styles.label}>
-            PREÇO
-          </Text>
 
-          <TextInput
-            style={styles.campo}
-            placeholder="Digite o preço."
-            placeholderTextColor="#8A8A8A"
-            value={preco}
-            onChangeText={setPreco}
-            keyboardType="numeric"
-          />
+            {/* PREÇO */}
+
+            <Text style={styles.label}>
+              PREÇO
+            </Text>
+
+            <TextInput
+              style={styles.campo}
+              placeholder="Digite o preço."
+              placeholderTextColor="#8A8A8A"
+              value={preco}
+              onChangeText={setPreco}
+              keyboardType="decimal-pad"
+            />
+                
+            
 
           {/* QUANTIDADE */}
+
           <Text style={styles.label}>
             QUANTIDADE
           </Text>
@@ -328,7 +373,9 @@ export default function Editar() {
             keyboardType="numeric"
           />
 
+
           {/* ESTOQUE MÍNIMO */}
+
           <Text style={styles.label}>
             ESTOQUE MÍNIMO
           </Text>
@@ -342,7 +389,8 @@ export default function Editar() {
             keyboardType="numeric"
           />
 
-          {/* DESCRIÇÃO */}
+                    {/* DESCRIÇÃO */}
+
           <Text style={styles.label}>
             DESCRIÇÃO
           </Text>
@@ -359,7 +407,11 @@ export default function Editar() {
             multiline
           />
 
+
+          {/* ========================= */}
           {/* CONFIRMAR */}
+          {/* ========================= */}
+
           <TouchableOpacity
             style={[
               styles.botaoConfirmar,
@@ -374,12 +426,17 @@ export default function Editar() {
                 ? 'ENVIANDO...'
                 : 'CONFIRMAR'}
             </Text>
+
           </TouchableOpacity>
+
         </View>
+
       </ScrollView>
+
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -575,3 +632,4 @@ const styles = StyleSheet.create({
   },
 
 });
+

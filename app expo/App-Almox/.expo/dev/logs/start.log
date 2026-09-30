@@ -4070,3 +4070,120 @@
 {"_e":"metro:bundling:done","_t":1790768555707,"id":"11","total":1,"ms":1317.2944}
 {"_e":"metro:client_log","_t":1790768579112,"level":"log","data":["STATUS:","200"]}
 {"_e":"metro:client_log","_t":1790768579232,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"root:init","_t":1790769212270,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790769212293,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790769212315,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790769218128,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790769225234,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790769228335,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790769241604,"atlas":false,"workers":3,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790769272959,"id":"1","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790769272961,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790769272966,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790769273087,"id":"1","progress":0.017777777777777778,"total":165,"current":22}
+{"_e":"metro:bundling:progress","_t":1790769273187,"id":"1","progress":0.08130514023967354,"total":249,"current":71}
+{"_e":"metro:bundling:progress","_t":1790769273287,"id":"1","progress":0.1833538983836552,"total":383,"current":164}
+{"_e":"metro:bundling:progress","_t":1790769273387,"id":"1","progress":0.2805506581330757,"total":455,"current":241}
+{"_e":"metro:bundling:progress","_t":1790769273487,"id":"1","progress":0.31955194317328056,"total":605,"current":342}
+{"_e":"metro:bundling:progress","_t":1790769273587,"id":"1","progress":0.32579338438089706,"total":664,"current":379}
+{"_e":"metro:bundling:progress","_t":1790769273687,"id":"1","progress":0.4760810701470154,"total":729,"current":503}
+{"_e":"metro:bundling:progress","_t":1790769273788,"id":"1","progress":0.4946616648887525,"total":873,"current":614}
+{"_e":"metro:bundling:progress","_t":1790769273888,"id":"1","progress":0.4946616648887525,"total":1034,"current":651}
+{"_e":"metro:bundling:progress","_t":1790769273988,"id":"1","progress":0.4946616648887525,"total":1043,"current":671}
+{"_e":"metro:bundling:progress","_t":1790769274088,"id":"1","progress":0.6108325071391989,"total":1117,"current":873}
+{"_e":"metro:bundling:progress","_t":1790769274188,"id":"1","progress":0.6555145884743795,"total":1245,"current":1008}
+{"_e":"metro:bundling:progress","_t":1790769274311,"id":"1","progress":0.6778168881432386,"total":1262,"current":1039}
+{"_e":"metro:bundling:progress","_t":1790769274413,"id":"1","progress":0.8311934496262015,"total":1325,"current":1208}
+{"_e":"metro:bundling:progress","_t":1790769274515,"id":"1","progress":0.880668720015126,"total":1397,"current":1311}
+{"_e":"metro:bundling:progress","_t":1790769274615,"id":"1","progress":0.9295142267507017,"total":1449,"current":1397}
+{"_e":"metro:bundling:progress","_t":1790769274715,"id":"1","progress":0.9505929067883179,"total":1519,"current":1481}
+{"_e":"metro:bundling:progress","_t":1790769274815,"id":"1","progress":0.9581585233038785,"total":1608,"current":1574}
+{"_e":"metro:bundling:progress","_t":1790769274921,"id":"1","progress":0.9988049000171136,"total":1673,"current":1672}
+{"_e":"metro:bundling:progress","_t":1790769280516,"id":"1","progress":0.999,"total":1673,"current":1673}
+{"_e":"metro:bundling:done","_t":1790769280757,"id":"1","total":1673,"ms":7796.7659}
+{"_e":"metro:client_log","_t":1790769364672,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790769364725,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790769647693,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790769647742,"level":"log","data":["RESPOSTA:","{\"mensagem\": \"Operação realizada com sucesso\", \"nova_quantidade\": 0, \"novo_preco\": 700, \"success\": true}"]}
+{"_e":"metro:bundling:started","_t":1790770108872,"id":"2","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790770108872,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790770108934,"id":"2","total":1,"ms":61.9379}
+{"_e":"metro:client_log","_t":1790770141630,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790770141868,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:started","_t":1790773093884,"id":"5","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790773093884,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773093887,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094020,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094271,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094372,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094472,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094572,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094672,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094772,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094873,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790773094984,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790773095087,"id":"5","total":1,"ms":1202.9031}
+{"_e":"metro:bundling:started","_t":1790773118509,"id":"6","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790773118509,"id":"6","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790773118566,"id":"6","total":1,"ms":56.7881}
+{"_e":"metro:client_log","_t":1790773152258,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790773152312,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790773153068,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790773153117,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790773671016,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790773671061,"level":"log","data":["RESPOSTA:","{\"mensagem\": \"Operação realizada com sucesso\", \"nova_quantidade\": 66, \"novo_preco\": 66, \"success\": true}"]}
+{"_e":"metro:bundling:started","_t":1790774120810,"id":"a","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790774120810,"id":"a","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790774120872,"id":"a","total":1,"ms":61.1737}
+{"_e":"metro:bundling:started","_t":1790774195333,"id":"g","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790774195333,"id":"g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790774195392,"id":"g","total":1,"ms":58.3003}
+{"_e":"metro:bundling:started","_t":1790774300921,"id":"o","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790774300921,"id":"o","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790774300991,"id":"o","total":1,"ms":70.153}
+{"_e":"metro:bundling:started","_t":1790775091679,"id":"u","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790775091680,"id":"u","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790775091742,"id":"u","total":1,"ms":62.865}
+{"_e":"metro:bundling:started","_t":1790775768260,"id":"w","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790775768260,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790775768261,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790775768367,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790775768558,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790775768629,"id":"w","total":1,"ms":369.1696}
+{"_e":"metro:bundling:started","_t":1790775798587,"id":"y","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790775798587,"id":"y","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790775798645,"id":"y","total":1,"ms":58.0466}
+{"_e":"metro:bundling:started","_t":1790776244926,"id":"10","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790776244926,"id":"10","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790776244984,"id":"10","total":1,"ms":57.7834}
+{"_e":"metro:client_log","_t":1790776273811,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790776273860,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790776351430,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790776351760,"level":"log","data":["RESPOSTA:","{\"mensagem\": \"Operação realizada com sucesso\", \"nova_quantidade\": 50, \"novo_preco\": 20.8, \"success\": true}"]}
+{"_e":"metro:bundling:started","_t":1790776352250,"id":"18","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790776352250,"id":"18","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790776352316,"id":"18","total":1,"ms":65.6187}
+{"_e":"metro:client_log","_t":1790776382674,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790776382732,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790776383352,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790776383404,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:started","_t":1790776885545,"id":"1b","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790776885545,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776885547,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776885683,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776886477,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776886578,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776886678,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776886778,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776886880,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776886980,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776887080,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790776887191,"id":"1b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790776887271,"id":"1b","total":1,"ms":1726.2792}
+{"_e":"metro:client_log","_t":1790776911473,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790776911546,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:client_log","_t":1790776912309,"level":"log","data":["STATUS:","200"]}
+{"_e":"metro:client_log","_t":1790776912370,"level":"log","data":["RESPOSTA DO SERVIDOR:","{\"email\": \"admin@empresa.com\", \"id\": 1, \"mensagem\": \"Login realizado com sucesso\", \"tipo\": \"admin\", \"usuario\": \"Administrador\"}"]}
+{"_e":"metro:bundling:started","_t":1790777062815,"id":"1c","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1790777062815,"id":"1c","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790777062874,"id":"1c","total":1,"ms":59.9206}

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Modal} from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Modal, Alert} from 'react-native';
 import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -46,6 +46,46 @@ export default function Tabela() {
     buscarProdutos();
   }, [])
 );
+
+// EXCLUIR ITEM
+const excluirItem = (id) => {
+  Alert.alert(
+    'Excluir item',
+    'Tem certeza que deseja excluir este item?',
+    [
+      { text: 'Cancelar', style: 'cancel' },
+      {
+        text: 'Excluir',
+        style: 'destructive',
+        onPress: async () => {
+          try {
+            const resposta = await fetch(
+              `http://10.154.20.78:5000/excluir/${id}`,
+              { method: 'DELETE' }
+            );
+
+            const data = await resposta.json();
+            console.log('RESPOSTA EXCLUIR:', data);
+
+            if (data.success) {
+              Alert.alert('Sucesso', 'Item excluído com sucesso!');
+
+              // Remove da tabela sem precisar recarregar
+              setProdutos((produtosAtuais) =>
+                produtosAtuais.filter((item) => item.id !== id)
+              );
+            } else {
+              Alert.alert('Erro', data.erro || 'Erro ao excluir o item.');
+            }
+          } catch (erro) {
+            console.log('ERRO AO EXCLUIR:', erro);
+            Alert.alert('Erro', 'Não foi possível conectar ao servidor.');
+          }
+        },
+      },
+    ]
+  );
+};
 
   return (
     <View style={styles.background}>
@@ -196,6 +236,16 @@ export default function Tabela() {
                       color="#FFFFFF"
                     />
                   </TouchableOpacity>
+                  <TouchableOpacity
+                      style={styles.botaoExcluir}
+                      onPress={() => excluirItem(item.id)}
+                    >
+                      <MaterialIcons
+                        name="delete"
+                        size={24}
+                        color="#FFFFFF"
+                      />
+                    </TouchableOpacity>
                 </View>
               </View>
 
@@ -217,7 +267,6 @@ export default function Tabela() {
                   <Text style={styles.detalhe}>
                     <Text style={styles.negrito}>DESCRIÇÃO:</Text> {item.descricao}
                   </Text>
-
                   <TouchableOpacity
                     style={styles.botaoImagem}
                     onPress={() => setImagemAberta(true)}
@@ -228,7 +277,7 @@ export default function Tabela() {
                       color="#FFFFFF"
                     />
                   </TouchableOpacity>
-                </View>
+                </View> 
               )}
             </>
           )}
@@ -277,7 +326,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     overflow: 'hidden',
   },
-    sidebar: {
+  sidebar: {
     position: 'absolute',
     left: 0,
     top: 30,
@@ -355,11 +404,6 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     borderRightColor: '#F28705',
   },
-  acao: {
-    width: '20%',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   cabecalho: {
     fontFamily: 'Poppins_700Bold',
     fontSize: 13,
@@ -371,12 +415,28 @@ const styles = StyleSheet.create({
     color: '#333333',
     textAlign: 'center',
   },
+  acao: {
+    width: '20%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
   botao: {
     width: 26,
     height: 26,
     backgroundColor: '#1D3273',
     borderRadius: 5,
     alignItems: 'center',
+    justifyContent: 'center',
+  },
+  botaoExcluir: {
+    width: 26,
+    height: 26,
+    backgroundColor: '#1D3273',
+    borderRadius: 5,
+    alignItems: 'center',
+    alignSelf: 'center',
     justifyContent: 'center',
   },
   detalhes: {
