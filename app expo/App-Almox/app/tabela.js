@@ -2,8 +2,8 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Modal} from 
 import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { MaterialIcons } from '@expo/vector-icons';
-import { useState } from 'react';
-import { router } from 'expo-router';
+import { useState, useCallback} from 'react';
+import { router, useFocusEffect } from 'expo-router';
 
 export default function Tabela() {
 
@@ -15,27 +15,37 @@ export default function Tabela() {
   const [produtoAberto, setProdutoAberto] = useState(null);
   const [menuAberto, setMenuAberto] = useState(false);
   const [imagemAberta, setImagemAberta] = useState(false);
+  const [produtos, setProdutos] = useState([]);
 
-  const produtos = [
-    {
-      id: 1,
-      nome: 'Chave Fenda',
-      responsavel: 'Róger',
-      categoria: 'Ferramentas',
-      quantidade: 15,
-      preco: 15.00,
-      descricao: 'Chave de fenda comum',
-    },
-    {
-      id: 2,
-      nome: 'Alicate',
-      responsavel: 'Viviane',
-      categoria: 'Ferramentas',
-      quantidade: 10,
-      preco: 25.00,
-      descricao: 'Alicate universal',
-    },
-  ];
+  useFocusEffect(
+  useCallback(() => {
+    const buscarProdutos = async () => {
+      try {
+        const resposta = await fetch('http://10.154.20.23:5000/tabela_app');
+        const dados = await resposta.json();
+
+        if (dados.success) {
+          const produtosFormatados = dados.produtos.map((item) => ({
+            id: item.id,
+            nome: item.nome,
+            responsavel: item.responsavel,
+            categoria: item.categoria,
+            quantidade: item.qtde,
+            estoque_min: item.estoque_min,
+            preco: item.preco,
+            descricao: item.descricao,
+          }));
+
+          setProdutos(produtosFormatados);
+        }
+      } catch (erro) {
+        console.log('ERRO AO BUSCAR PRODUTOS:', erro);
+      }
+    };
+
+    buscarProdutos();
+  }, [])
+);
 
   return (
     <View style={styles.background}>
@@ -131,7 +141,7 @@ export default function Tabela() {
       )}
 
       <Text style={styles.titulo}>
-        Bem-vindo(a) ao Almoxarifado!
+        {"Boas-vindas ao\nAlmoxarifado!"}
       </Text>
 
       <View style={styles.tabela}>

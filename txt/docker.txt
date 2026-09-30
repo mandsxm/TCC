@@ -9,7 +9,13 @@ docker run -d --name almox --network almoxarifado-rede -p 5000:5000 tccalmox
 docker build -f banco/Dockerfile.mysql -t almoxarifado-mysql .
 docker run -d --name almoxarifado-mysql --network almoxarifado-rede -p 3306:3306 almoxarifado-mysql
 
+##EXCLUIR E REFAZER O CONTAINER
+docker stop almox
+docker rm almox
+
+
 ## VERIFICAR O BANCO DE INSERÇÃO DE PRODUOS E USUÁRIOS
 docker exec -it almoxarifado-mysql mysql -u root
 USE almoxarifado
 SELECT id, user, email, tipo FROM usuarios;
+SELECT responsavel, nome, categoria, qtde, estoque_min, preco, descricao, imagem FROM estoque
