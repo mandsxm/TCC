@@ -739,7 +739,58 @@ def cadastro_app():
             'erro': str(erro)
         }), 500
 
+# CONTAS DO APP
+# CONTAS DO APP
+@app.route('/contas_app', methods=['GET'])
+def contas_app():
 
+    conexao = None
+    cursor = None
+
+    try:
+        conexao = get_db()
+        cursor = conexao.cursor()
+
+        cursor.execute("""
+            SELECT id, user, email, tipo
+            FROM usuarios
+            ORDER BY id ASC
+        """)
+
+        resultado = cursor.fetchall()
+
+        usuarios = []
+
+        for item in resultado:
+            usuarios.append({
+                "id": item[0],
+                "nome": item[1],
+                "email": item[2],
+                "tipo": item[3]
+            })
+
+        return jsonify({
+            "success": True,
+            "usuarios": usuarios
+        }), 200
+
+    except Exception as erro:
+
+        print("ERRO CONTAS APP:", repr(erro))
+
+        return jsonify({
+            "success": False,
+            "erro": "Erro ao buscar usuários"
+        }), 500
+
+    finally:
+
+        if cursor:
+            cursor.close()
+
+        if conexao:
+            conexao.close()
+            
 # RODAR
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)
