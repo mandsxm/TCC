@@ -2,7 +2,8 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Modal, Alert
 import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { MaterialIcons } from '@expo/vector-icons';
-import { useState, useCallback} from 'react';
+import { useState, useCallback } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { router, useFocusEffect } from 'expo-router';
 
 export default function Tabela() {
@@ -16,19 +17,35 @@ export default function Tabela() {
   const [menuAberto, setMenuAberto] = useState(false);
   const [imagemAberta, setImagemAberta] = useState(false);
   const [produtos, setProdutos] = useState([]);
+  const [nomeUsuario, setNomeUsuario] = useState('');
+  const [tipoUsuario, setTipoUsuario] = useState('');
+
+  useFocusEffect(
+    useCallback(() => {
+      const carregarUsuario = async () => {
+        const nome = await AsyncStorage.getItem('nomeUsuario');
+        const tipo = await AsyncStorage.getItem('tipoUsuario');
+
+        setNomeUsuario(nome || '');
+        setTipoUsuario(tipo || '');
+      };
+
+      carregarUsuario();
+    }, [])
+  );
 
   useFocusEffect(
   useCallback(() => {
     const buscarProdutos = async () => {
       try {
-        const resposta = await fetch('http://10.154.20.23:5000/tabela_app');
+        const resposta = await fetch('http://10.154.20.25:5000/tabela_app');
         const dados = await resposta.json();
 
         if (dados.success) {
           const produtosFormatados = dados.produtos.map((item) => ({
             id: item.id,
-            nome: item.nome,
             responsavel: item.responsavel,
+            nome: item.nome,
             categoria: item.categoria,
             quantidade: item.qtde,
             estoque_min: item.estoque_min,
@@ -60,7 +77,7 @@ const excluirItem = (id) => {
         onPress: async () => {
           try {
             const resposta = await fetch(
-              `http://10.154.20.78:5000/excluir/${id}`,
+              `http://10.154.20.25:5000/excluir/${id}`,
               { method: 'DELETE' }
             );
 
@@ -163,8 +180,10 @@ const excluirItem = (id) => {
           </TouchableOpacity>
 
           <Text style={styles.sidebarTitulo}>USUÁRIO</Text>
-          <Text style={styles.usuario}>Róger</Text>
-          <Text style={styles.tipo}>Usuário</Text>
+          <Text style={styles.usuario}>{nomeUsuario}</Text>
+          <Text style={styles.tipo}>
+            {tipoUsuario === 'admin' ? 'Administrador' : 'Usuário'}
+          </Text>
 
           <TouchableOpacity
             style={styles.logout}

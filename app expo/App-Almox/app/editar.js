@@ -1,7 +1,10 @@
-import { useState } from 'react';
-import {View,Text,StyleSheet,TouchableOpacity,TextInput,ScrollView,Alert,} from 'react-native';
+import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity, FlatList, Modal, Alert, ScrollView} from 'react-native';
+import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';
+import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { MaterialIcons } from '@expo/vector-icons';
-import { router } from 'expo-router';
+import { useState, useCallback } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { router, useFocusEffect } from 'expo-router';
 
 export default function Editar() {
 
@@ -18,6 +21,24 @@ export default function Editar() {
   const [preco, setPreco] = useState('');
   const [quantidade, setQuantidade] = useState('');
   const [estoqueMin, setEstoqueMin] = useState('');
+
+  // Controla o tipo do usuário
+  const [nomeUsuario, setNomeUsuario] = useState('');
+  const [tipoUsuario, setTipoUsuario] = useState('');
+  
+    useFocusEffect(
+      useCallback(() => {
+        const carregarUsuario = async () => {
+          const nome = await AsyncStorage.getItem('nomeUsuario');
+          const tipo = await AsyncStorage.getItem('tipoUsuario');
+  
+          setNomeUsuario(nome || '');
+          setTipoUsuario(tipo || '');
+        };
+  
+        carregarUsuario();
+      }, [])
+    );
 
   // Controle de envio
   const [carregando, setCarregando] = useState(false);
@@ -60,7 +81,7 @@ export default function Editar() {
     try {
 
       const resposta = await fetch(
-        'http://10.154.20.23:5000/entrada_app',
+        'http://10.154.20.25:5000/entrada_app',
         {
           method: 'POST',
 
@@ -201,21 +222,11 @@ export default function Editar() {
             />
           </TouchableOpacity>
 
-
-          <Text style={styles.sidebarTitulo}>
-            USUÁRIO
+          <Text style={styles.sidebarTitulo}>USUÁRIO</Text>
+          <Text style={styles.usuario}>{nomeUsuario}</Text>
+          <Text style={styles.tipo}>
+            {tipoUsuario === 'admin' ? 'Administrador' : 'Usuário'}
           </Text>
-
-
-          <Text style={styles.usuario}>
-            Róger
-          </Text>
-
-
-          <Text style={styles.tipoUsuario}>
-            Usuário
-          </Text>
-
 
           <TouchableOpacity
             style={styles.logout}

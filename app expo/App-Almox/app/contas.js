@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Modal} from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Modal } from 'react-native';
 import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { MaterialIcons } from '@expo/vector-icons';
-import { useState } from 'react';
-import { router } from 'expo-router';
+import { useState, useEffect } from 'react';
+import { router, usePathname } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Usuarios() {
 
@@ -14,43 +15,94 @@ export default function Usuarios() {
 
   const [produtoAberto, setProdutoAberto] = useState(null);
   const [menuAberto, setMenuAberto] = useState(false);
-  const [imagemAberta, setImagemAberta] = useState(false);
+  const [nomeUsuario, setNomeUsuario] = useState('');
+  const [tipoUsuario, setTipoUsuario] = useState('');
+  const [usuarios, setUsuarios] = useState([]);
 
-  const produtos = [
-    {
-      id: 1,
-      nome: 'Administrador',
-      email: 'admin@empresa.com',
-      tipo: 'Administrador',
-    },
-    {
-      id: 2,
-      nome: 'João',
-      email: 'joao@empresa.com',
-      tipo: 'Usuário',
-    },
-  ];
+  // Descobre em qual tela estamos
+  const pathname = usePathname();
+
+  // BUSCAR USUÁRIOS DO BANCO
+  useEffect(() => {
+
+    const buscarUsuarios = async () => {
+
+      try {
+
+        const resposta = await fetch(
+          'http://10.154.20.25:5000/contas_app'
+        );
+
+        console.log('STATUS:', resposta.status);
+
+        const dados = await resposta.json();
+
+        console.log('USUÁRIOS:', dados);
+
+        if (dados.success) {
+          setUsuarios(dados.usuarios);
+        }
+
+      } catch (erro) {
+
+        console.log('Erro ao buscar usuários:', erro);
+
+      }
+
+    };
+
+    // Só busca quando estiver na tela CONTAS
+    if (pathname === '/contas') {
+      buscarUsuarios();
+    }
+
+  }, [pathname]);
+
+
+  // CARREGAR USUÁRIO LOGADO
+  useEffect(() => {
+
+    const carregarUsuario = async () => {
+
+      const nome = await AsyncStorage.getItem('nomeUsuario');
+      const tipo = await AsyncStorage.getItem('tipoUsuario');
+
+      setNomeUsuario(nome || '');
+      setTipoUsuario(tipo || '');
+
+    };
+
+    carregarUsuario();
+
+  }, []);
+
 
   return (
     <View style={styles.background}>
 
+      {/* POPUP DA IMAGEM */}
       <Modal
         visible={imagemAberta}
         transparent={true}
         animationType="fade"
         onRequestClose={() => setImagemAberta(false)}
       >
+
         <View style={styles.fundoPopup}>
+
           <View style={styles.popup}>
+
             <TouchableOpacity
               style={styles.fecharPopup}
               onPress={() => setImagemAberta(false)}
             >
+
               <MaterialIcons
                 name="close"
                 size={25}
                 color="#FFFFFF"
               />
+
             </TouchableOpacity>
 
             <Image
@@ -58,149 +110,300 @@ export default function Usuarios() {
               style={styles.imagemPopup}
               resizeMode="contain"
             />
+
           </View>
+
         </View>
+
       </Modal>
 
+
       {/* NAVBAR */}
+
       <View style={styles.navbar}>
+
         <TouchableOpacity
           style={styles.menuButton}
           onPress={() => setMenuAberto(!menuAberto)}
         >
+
           <MaterialIcons
             name="menu"
             size={30}
             color="#FFFFFF"
           />
+
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push('/tabela')}>
-          <Text style={styles.link}>ESTOQUE</Text>
+
+        <TouchableOpacity
+          onPress={() => router.push('/tabela')}
+        >
+
+          <Text style={styles.link}>
+            ESTOQUE
+          </Text>
+
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push('/editar')}>
-          <Text style={styles.link}>EDITAR</Text>
+
+        <TouchableOpacity
+          onPress={() => router.push('/editar')}
+        >
+
+          <Text style={styles.link}>
+            EDITAR
+          </Text>
+
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push('/contas')}>
-          <Text style={styles.link}>CONTAS</Text>
+
+        <TouchableOpacity
+          onPress={() => router.push('/contas')}
+        >
+
+          <Text style={styles.link}>
+            CONTAS
+          </Text>
+
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push('/cadastro')}>
-          <Text style={styles.link}>CADASTRO</Text>
+
+        <TouchableOpacity
+          onPress={() => router.push('/cadastro')}
+        >
+
+          <Text style={styles.link}>
+            CADASTRO
+          </Text>
+
         </TouchableOpacity>
+
       </View>
 
+
       {/* SIDEBAR */}
+
       {menuAberto && (
+
         <View style={styles.sidebar}>
+
           <TouchableOpacity
             style={styles.closeButton}
             onPress={() => setMenuAberto(false)}
           >
+
             <MaterialIcons
               name="close"
               size={25}
               color="#FFFFFF"
             />
+
           </TouchableOpacity>
 
-          <Text style={styles.sidebarTitulo}>USUÁRIO</Text>
-          <Text style={styles.usuario}>Róger</Text>
-          <Text style={styles.tipo}>Usuário</Text>
+
+          <Text style={styles.sidebarTitulo}>
+            USUÁRIO
+          </Text>
+
+
+          <Text style={styles.usuario}>
+            {nomeUsuario}
+          </Text>
+
+
+          <Text style={styles.tipo}>
+            {tipoUsuario === 'admin'
+              ? 'Administrador'
+              : 'Usuário'}
+          </Text>
+
 
           <TouchableOpacity
             style={styles.logout}
             onPress={() => router.replace('/login')}
           >
+
             <MaterialIcons
               name="logout"
               size={20}
               color="#FFFFFF"
             />
-            <Text style={styles.logoutTexto}>DESLOGAR</Text>
+
+            <Text style={styles.logoutTexto}>
+              DESLOGAR
+            </Text>
+
           </TouchableOpacity>
+
         </View>
+
       )}
+
+
+      {/* TÍTULO */}
 
       <Text style={styles.titulo}>
         Boas-Vindas ao Gerenciador de Contas!
       </Text>
 
+
+      {/* TABELA */}
+
       <View style={styles.tabela}>
 
         {/* CABEÇALHO */}
+
         <View style={styles.linha}>
+
           <View style={styles.id}>
-            <Text style={styles.cabecalho}>ID</Text>
+
+            <Text style={styles.cabecalho}>
+              ID
+            </Text>
+
           </View>
+
+
           <View style={styles.nome}>
-            <Text style={styles.cabecalho}>NOME</Text>
+
+            <Text style={styles.cabecalho}>
+              NOME
+            </Text>
+
           </View>
+
+
           <View style={styles.acao}>
-            <Text style={styles.cabecalho}>INFORMAÇÕES</Text>
+
+            <Text style={styles.cabecalho}>
+              INFORMAÇÕES
+            </Text>
+
           </View>
+
         </View>
 
+
         {/* USUÁRIOS */}
+
         <FlatList
-          data={produtos}
-          keyExtractor={(item) => item.id.toString()}
+
+          data={usuarios}
+
+          keyExtractor={(item) =>
+            item.id.toString()
+          }
+
           renderItem={({ item }) => (
+
             <>
+
+              {/* LINHA DO USUÁRIO */}
+
               <View style={styles.linha}>
+
                 <View style={styles.id}>
-                  <Text style={styles.texto}>{item.id}</Text>
+
+                  <Text style={styles.texto}>
+                    {item.id}
+                  </Text>
+
                 </View>
+
 
                 <View style={styles.nome}>
-                  <Text style={styles.texto}>{item.nome}</Text>
+
+                  <Text style={styles.texto}>
+                    {item.nome}
+                  </Text>
+
                 </View>
 
+
                 <View style={styles.acao}>
+
                   <TouchableOpacity
                     style={styles.botao}
                     onPress={() =>
                       setProdutoAberto(
-                        produtoAberto === item.id ? null : item.id
+                        produtoAberto === item.id
+                          ? null
+                          : item.id
                       )
                     }
                   >
+
                     <MaterialIcons
                       name="visibility"
                       size={16}
                       color="#FFFFFF"
                     />
+
                   </TouchableOpacity>
+
                 </View>
+
               </View>
 
-              {/* DETALHES A MAIS */}
+
+              {/* DETALHES */}
+
               {produtoAberto === item.id && (
+
                 <View style={styles.detalhes}>
-                  <Text style={styles.detalhe}>
-                    <Text style={styles.negrito}>E-MAIL:</Text> {item.email}
-                  </Text>
 
                   <Text style={styles.detalhe}>
-                    <Text style={styles.negrito}>TIPO:</Text> {item.tipo}
+
+                    <Text style={styles.negrito}>
+                      E-MAIL:
+                    </Text>
+
+                    {' '}
+
+                    {item.email}
+
                   </Text>
+
+
+                  <Text style={styles.detalhe}>
+
+                    <Text style={styles.negrito}>
+                      TIPO:
+                    </Text>
+
+                    {' '}
+
+                    {item.tipo === 'admin'
+                      ? 'Administrador'
+                      : 'Usuário'}
+
+                  </Text>
+
 
                   <TouchableOpacity
                     style={styles.botaoImagem}
-                    onPress={() => setImagemAberta(true)}
+                    onPress={() =>
+                      setImagemAberta(true)
+                    }
                   >
+
                     <MaterialIcons
                       name="image"
                       size={18}
                       color="#FFFFFF"
                     />
+
                   </TouchableOpacity>
+
                 </View>
+
               )}
+
             </>
+
           )}
+
         />
 
       </View>
@@ -209,11 +412,15 @@ export default function Usuarios() {
   );
 }
 
+
 const styles = StyleSheet.create({
+
   background: {
     flex: 1,
     backgroundColor: '#F0F1F2',
   },
+
+
   titulo: {
     fontSize: 25,
     textAlign: 'center',
@@ -221,7 +428,9 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     fontFamily: 'Poppins_700Bold',
   },
-    navbar: {
+
+
+  navbar: {
     height: 60,
     backgroundColor: '#1D3273',
     flexDirection: 'row',
@@ -232,12 +441,21 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     zIndex: 10,
   },
+
+
+  menuButton: {
+    marginRight: 10,
+  },
+
+
   link: {
     color: '#FFFFFF',
     fontSize: 14,
     marginLeft: 25,
     fontFamily: 'Poppins_700Bold',
   },
+
+
   tabela: {
     marginHorizontal: 15,
     backgroundColor: '#FFFFFF',
@@ -246,7 +464,9 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     overflow: 'hidden',
   },
-    sidebar: {
+
+
+  sidebar: {
     position: 'absolute',
     left: 0,
     top: 30,
@@ -256,25 +476,33 @@ const styles = StyleSheet.create({
     zIndex: 100,
     paddingTop: 20,
     paddingHorizontal: 20,
-   },
+  },
+
+
   sidebarTitulo: {
     color: '#FFFFFF',
     fontSize: 22,
     fontFamily: 'Poppins_700Bold',
     marginBottom: 30,
   },
+
+
   usuario: {
     color: '#FFFFFF',
     fontSize: 18,
     fontFamily: 'Poppins_700Bold',
     marginBottom: 5,
   },
+
+
   tipo: {
     color: '#FFFFFF',
     fontSize: 14,
     fontFamily: 'Montserrat_400Regular',
     marginBottom: 30,
   },
+
+
   logout: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -283,11 +511,15 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: 'rgba(255,255,255,0.3)',
   },
+
+
   logoutTexto: {
     color: '#FFFFFF',
     fontSize: 14,
     fontFamily: 'Poppins_700Bold',
   },
+
+
   closeButton: {
     position: 'absolute',
     right: 10,
@@ -297,12 +529,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+
   linha: {
     flexDirection: 'row',
     minHeight: 48,
     borderBottomWidth: 1,
     borderBottomColor: '#F28705',
   },
+
+
   id: {
     width: '15%',
     alignItems: 'center',
@@ -310,6 +546,8 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     borderRightColor: '#F28705',
   },
+
+
   nome: {
     width: '30%',
     alignItems: 'center',
@@ -317,29 +555,30 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     borderRightColor: '#F28705',
   },
-  responsavel: {
-    width: '35%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRightWidth: 1,
-    borderRightColor: '#F28705',
-  },
+
+
   acao: {
-    width: '56%',
+    width: '55%',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+
   cabecalho: {
     fontFamily: 'Poppins_700Bold',
     fontSize: 13,
     color: '#333333',
     textAlign: 'center',
   },
+
+
   texto: {
     fontSize: 14,
     color: '#333333',
     textAlign: 'center',
   },
+
+
   botao: {
     width: 100,
     height: 26,
@@ -348,26 +587,36 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+
   detalhes: {
     padding: 12,
     backgroundColor: '#FFFFFF',
     borderBottomWidth: 1,
     borderBottomColor: '#F28705',
   },
+
+
   detalhe: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 4,
   },
+
+
   negrito: {
     fontWeight: 'bold',
   },
+
+
   fundoPopup: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+
   popup: {
     width: '80%',
     height: '60%',
@@ -377,6 +626,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+
   fecharPopup: {
     position: 'absolute',
     top: 10,
@@ -386,8 +637,24 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 5,
   },
+
+
   imagemPopup: {
     width: '100%',
     height: '80%',
   },
+
+
+  botaoImagem: {
+    width: 100,
+    height: 30,
+    backgroundColor: '#1D3273',
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 8,
+    alignSelf: 'center',
+  },
+
 });
+

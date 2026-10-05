@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { Card } from 'react-native-paper';
-import { useFonts} from '@expo-google-fonts/inter';
+import { useFonts } from '@expo-google-fonts/inter';
 import { Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { MaterialIcons } from '@expo/vector-icons';
-import { useState } from 'react';
-import { router } from 'expo-router';
+import { useState, useCallback } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { router, useFocusEffect } from 'expo-router';
 
 export default function Cadastro() {
     const [usuario, setUsuario] = useState('');
@@ -15,7 +16,22 @@ export default function Cadastro() {
     const [usuarioFocus, setUsuarioFocus] = useState(false);
     const [emailFocus, setEmailFocus] = useState(false);
     const [senhaFocus, setSenhaFocus] = useState(false);
+    const [nomeUsuario, setNomeUsuario] = useState('');
+    const [tipoUsuario, setTipoUsuario] = useState('');
 
+    useFocusEffect(
+      useCallback(() => {
+        const carregarUsuario = async () => {
+          const nome = await AsyncStorage.getItem('nomeUsuario');
+          const tipo = await AsyncStorage.getItem('tipoUsuario');
+
+          setNomeUsuario(nome || '');
+          setTipoUsuario(tipo || '');
+        };
+
+        carregarUsuario();
+      }, [])
+    );
 
     const cadastrarUsuario = async () => {
     try {
@@ -24,7 +40,7 @@ export default function Cadastro() {
     return;
     }
 
-    const resposta = await fetch('http://10.154.20.23:5000/cadastro_app', {
+    const resposta = await fetch('http://10.154.20.25:5000/cadastro_app', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json',
@@ -52,7 +68,7 @@ export default function Cadastro() {
     setEmail('');
     setSenha('');
 
-    router.replace('/tabela');
+    router.replace('/contas');
 
     } catch (erro) {
     console.log('ERRO:', erro);
@@ -116,8 +132,10 @@ export default function Cadastro() {
           </TouchableOpacity>
 
           <Text style={styles.sidebarTitulo}>USUÁRIO</Text>
-          <Text style={styles.usuario}>Róger</Text>
-          <Text style={styles.tipo}>Usuário</Text>
+          <Text style={styles.usuario}>{nomeUsuario}</Text>
+          <Text style={styles.tipo}>
+            {tipoUsuario === 'admin' ? 'Administrador' : 'Usuário'}
+          </Text>
 
           <TouchableOpacity
             style={styles.logout}
