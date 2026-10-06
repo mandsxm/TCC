@@ -38,7 +38,7 @@ export default function Tabela() {
   useCallback(() => {
     const buscarProdutos = async () => {
       try {
-        const resposta = await fetch('http://10.154.20.25:5000/tabela_app');
+        const resposta = await fetch('http://10.154.20.78:5000/tabela_app');
         const dados = await resposta.json();
 
         if (dados.success) {
@@ -77,7 +77,7 @@ const excluirItem = (id) => {
         onPress: async () => {
           try {
             const resposta = await fetch(
-              `http://10.154.20.25:5000/excluir/${id}`,
+              `http://10.154.20.78:5000/excluir/${id}`,
               { method: 'DELETE' }
             );
 
@@ -264,7 +264,7 @@ const excluirItem = (id) => {
                         size={24}
                         color="#FFFFFF"
                       />
-                    </TouchableOpacity>
+                  </TouchableOpacity>
                 </View>
               </View>
 
@@ -320,7 +320,7 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     fontFamily: 'Poppins_700Bold',
   },
-    navbar: {
+  navbar: {
     height: 60,
     backgroundColor: '#1D3273',
     flexDirection: 'row',

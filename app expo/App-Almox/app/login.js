@@ -25,7 +25,7 @@ export default function Login() {
 
   const fazerLogin = async () => {
   try {
-    const resposta = await fetch('http://10.154.20.25:5000/login_app', {
+    const resposta = await fetch('http://10.154.20.78:5000/login_app', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -73,8 +73,8 @@ export default function Login() {
 
       <LinearGradient
         colors={[
-          'rgba(29, 50, 115, 0.25)',
-          'rgba(82, 104, 168, 0.95)'
+          'rgba(43, 80, 182, 0.25)',
+          'rgba(4, 11, 31, 0.95)'
         ]}
         start={{ x: 0, y: 0 }}
         end={{ x: 0, y: 1 }}
@@ -84,11 +84,11 @@ export default function Login() {
       <View style={styles.content}>
 
         <Text style={styles.paragraph1}>
-          BOAS-VINDAS
+          BOAS-VINDAS AO
         </Text>
 
         <Text style={styles.paragraph2}>
-          AO SENAI ALMOXARIFADO
+          {"SENAI\nALMOXARIFADO"}
         </Text>
 
         <View style={styles.inputContainer}>
@@ -173,16 +173,17 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     paddingTop: 100,
-    paddingBottom: 60,
+    paddingBottom: 0,
   },
 
   paragraph1: {
     width: '90%',
-    fontSize: 23,
+    fontSize: 30,
     fontFamily: 'Montserrat_400Regular',
     color: '#F0F1F2',
     textAlign: 'left',
-    marginBottom: 2,
+    marginTop: 15,
+    marginBottom: 0,
     textShadowColor: 'rgba(0, 0, 0, 0.3)',
     textShadowOffset: { width: 3, height: 3 },
     textShadowRadius: 0,
@@ -190,11 +191,11 @@ const styles = StyleSheet.create({
 
   paragraph2: {
     width: '90%',
-    fontSize: 25,
+    fontSize: 40,
     fontFamily: 'Montserrat_700Bold',
     color: '#F0F1F2',
     textAlign: 'left',
-    marginBottom: 30,
+    marginTop: -10,
     textShadowColor: 'rgba(0, 0, 0, 0.3)',
     textShadowOffset: { width: 3, height: 3 },
     textShadowRadius: 0,

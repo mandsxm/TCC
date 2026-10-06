@@ -6,3 +6,9 @@ Remove-Item -Recurse -Force node_modules
 cd ".\App-Almox\"
 npm.cmd install (Para sempre colocar o node_modules)
 npx.cmd expo start
+
+
+cd ".\app expo\App-Almox\"
+Remove-Item -Recurse -Force node_modules
+npm.cmd install
+npx.cmd expo start

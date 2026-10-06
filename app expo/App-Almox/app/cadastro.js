@@ -40,7 +40,7 @@ export default function Cadastro() {
     return;
     }
 
-    const resposta = await fetch('http://10.154.20.25:5000/cadastro_app', {
+    const resposta = await fetch('http://10.154.20.78:5000/cadastro_app', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json',

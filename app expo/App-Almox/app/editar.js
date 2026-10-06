@@ -81,7 +81,7 @@ export default function Editar() {
     try {
 
       const resposta = await fetch(
-        'http://10.154.20.25:5000/entrada_app',
+        'http://10.154.20.78:5000/entrada_app',
         {
           method: 'POST',
 
