@@ -8,6 +8,9 @@ npm.cmd install (Para sempre colocar o node_modules)
 npx.cmd expo start
 
 
+Powershell:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 cd ".\app expo\App-Almox\"
 Remove-Item -Recurse -Force node_modules
 npm.cmd install
